@@ -3,7 +3,7 @@ package game2048;
 import java.awt.Color;
 
 public class Tile {
-	int value;
+	private int value;
 
     public Tile() {
       this(0);
@@ -20,6 +20,7 @@ public class Tile {
     public Color getForeground() {
       return value < 16 ? new Color(0x776e65) :  new Color(0xf9f6f2);
     }
+    
 
     public Color getBackground() {
       switch (value) {
@@ -36,5 +37,13 @@ public class Tile {
         case 2048: return new Color(0xedc22e);
       }
       return new Color(0xcdc1b4);
+    }
+    
+    public int getValue() {
+    	return value;
+    }
+    
+    public void setValue(int value) {
+    	this.value = value;
     }
 }
