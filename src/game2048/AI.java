@@ -1,3 +1,4 @@
+package game2048;
 
 public class AI {
 	public static void main(String avgs[]) {
