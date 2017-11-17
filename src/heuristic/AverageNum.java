@@ -10,7 +10,7 @@ import game2048.Tile;
  * Author: Xiangde Zeng
  * **/
 public class AverageNum implements Heuristic {
-	
+	@Override
 	public double function(Tile[] tile) {
 		int n = tile.length;
 		int count = 0;

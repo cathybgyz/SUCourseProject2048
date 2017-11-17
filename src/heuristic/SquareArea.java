@@ -10,6 +10,7 @@ import game2048.Tile;
  * **/
 
 public class SquareArea implements Heuristic{
+	@Override
 	public double function(Tile[] tile) {
 		int n = tile.length;
 		int l=0;
