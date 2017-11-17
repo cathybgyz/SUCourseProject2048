@@ -143,7 +143,8 @@ public class Game2048 extends JPanel {
     if (!availableSpace().isEmpty()) {
       int index = (int) (Math.random() * list.size()) % list.size();
       Tile emptyTime = list.get(index);
-      emptyTime.value = Math.random() < 0.9 ? 2 : 4;
+      int newNum = Math.random() < 0.9 ? 2 : 4;
+      emptyTime.setValue(newNum);
     }
   }
 
@@ -168,8 +169,8 @@ public class Game2048 extends JPanel {
     for (int x = 0; x < 4; x++) {
       for (int y = 0; y < 4; y++) {
         Tile t = tileAt(x, y);
-        if ((x < 3 && t.value == tileAt(x + 1, y).value)
-          || ((y < 3) && t.value == tileAt(x, y + 1).value)) {
+        if ((x < 3 && t.getValue() == tileAt(x + 1, y).getValue())
+          || ((y < 3) && t.getValue() == tileAt(x, y + 1).getValue())) {
           return true;
         }
       }
@@ -185,7 +186,7 @@ public class Game2048 extends JPanel {
     }
 
     for (int i = 0; i < line1.length; i++) {
-      if (line1[i].value != line2[i].value) {
+      if (line1[i].getValue() != line2[i].getValue()) {
         return false;
       }
     }
@@ -235,8 +236,8 @@ public class Game2048 extends JPanel {
   private Tile[] mergeLine(Tile[] oldLine) {
     LinkedList<Tile> list = new LinkedList<Tile>();
     for (int i = 0; i < 4 && !oldLine[i].isEmpty(); i++) {
-      int num = oldLine[i].value;
-      if (i < 3 && oldLine[i].value == oldLine[i + 1].value) {
+      int num = oldLine[i].getValue();
+      if (i < 3 && oldLine[i].getValue() == oldLine[i + 1].getValue()) {
         num *= 2;
         myScore += num;
         int ourTarget = 2048;
@@ -289,7 +290,7 @@ public class Game2048 extends JPanel {
     Graphics2D g = ((Graphics2D) g2);
     g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
     g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_NORMALIZE);
-    int value = tile.value;
+    int value = tile.getValue();
     int xOffset = offsetCoors(x);
     int yOffset = offsetCoors(y);
     g.setColor(tile.getBackground());
