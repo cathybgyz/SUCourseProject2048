@@ -1,0 +1,51 @@
+package heuristic;
+
+import game2048.Tile;
+/*
+ * Heuristic function to get the distance between the tile with maximum number and the vertex
+ * For the tile with the maximum number, if the distance to one of the vertex is 0, then it will
+ * get score of 2. If the distance is 1 then the score will be 1 otherwise the score will be 0.
+ *
+ * Author: Tianyu Zhang
+ */
+public class MaxNumDistance {
+
+	public double MaxNumDistance(Tile[] tile) {
+		int max = 0;
+		int i = 0;
+		int j = 0;
+		int n = tile.length;
+		int imax = 0;
+		int jmax = 0;
+		for(i = 0; i<4;i++ ) {
+			for(j = 1; j<4;j++) {
+				max = tile[0].getValue();
+				if(max < tile[i*4+j].getValue()) {
+					max = tile[i].getValue();
+					imax = i;
+					jmax = j;
+				}
+			}
+		}
+		while( i<4) {
+			while(j<4) {
+				j=0;
+				if(Math.abs(i-imax)+Math.abs(j-jmax)==0) {
+					return 2;
+					break;
+				}
+				else if(Math.abs(i-imax)+Math.abs(j-jmax)==1){
+					return 1;
+					break;
+				}
+				else{
+					return 0;
+					break;
+				}
+				j=j+3;
+			}
+			i=i+3;
+		}
+	}
+}
+

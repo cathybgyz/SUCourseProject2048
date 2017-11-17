@@ -1,0 +1,13 @@
+package heuristic;
+
+import game2048.Tile;
+
+public class MaxNumberDistance implements Heuristic {
+
+	@Override
+	public double function(Tile[] tile) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
