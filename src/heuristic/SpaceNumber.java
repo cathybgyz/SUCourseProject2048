@@ -10,8 +10,11 @@ import game2048.Tile;
 public class SpaceNumber implements Heuristic {
 	@Override
 	public double function(Tile[] tile) {
-		// TODO Auto-generated method stub
-		return 0;
+		int count = 0;
+		for (Tile t : tile) {
+			if (t.getValue() == 0)
+				count++;
+		}
+		return (double)count;
 	}
-
 }
