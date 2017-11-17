@@ -42,41 +42,50 @@ public class Game2048 extends JPanel {
   public Game2048() {
     setPreferredSize(new Dimension(340, 400));
     setFocusable(true);
-    addKeyListener(new KeyAdapter() {
-      @Override
-      public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
-          resetGame();
-        }
-        if (!canMove()) {
-          myLose = true;
-        }
-
-        if (!myWin && !myLose) {
-          switch (e.getKeyCode()) {
-            case KeyEvent.VK_LEFT:
-              left();
-              break;
-            case KeyEvent.VK_RIGHT:
-              right();
-              break;
-            case KeyEvent.VK_DOWN:
-              down();
-              break;
-            case KeyEvent.VK_UP:
-              up();
-              break;
-          }
-        }
-
-        if (!myWin && !canMove()) {
-          myLose = true;
-        }
-
-        repaint();
-      }
-    });
     resetGame();
+  }
+  
+  public void SetKeyAdapter(KeyAdapter keyAdapter) {
+	  addKeyListener(keyAdapter);
+  }
+  
+  // Broke this out of the Game2048 constructor in case you want to write your own.
+  // Look at SetKeyAdapter()
+  public KeyAdapter Game2048ClassicKeyAdapter() {
+	  return new KeyAdapter() {
+	      @Override
+	      public void keyPressed(KeyEvent e) {
+	        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+	          resetGame();
+	        }
+	        if (!canMove()) {
+	          myLose = true;
+	        }
+
+	        if (!myWin && !myLose) {
+	          switch (e.getKeyCode()) {
+	            case KeyEvent.VK_LEFT:
+	              left();
+	              break;
+	            case KeyEvent.VK_RIGHT:
+	              right();
+	              break;
+	            case KeyEvent.VK_DOWN:
+	              down();
+	              break;
+	            case KeyEvent.VK_UP:
+	              up();
+	              break;
+	          }
+	        }
+
+	        if (!myWin && !canMove()) {
+	          myLose = true;
+	        }
+
+	        repaint();
+	      }
+      };
   }
 
   public void resetGame() {
@@ -334,7 +343,10 @@ public class Game2048 extends JPanel {
     game.setSize(340, 400);
     game.setResizable(false);
 
-    game.add(new Game2048());
+    Game2048 game2048 = new Game2048();
+    // setting classic game
+    game2048.SetKeyAdapter(game2048.Game2048ClassicKeyAdapter());
+    game.add(game2048);
 
     game.setLocationRelativeTo(null);
     game.setVisible(true);
