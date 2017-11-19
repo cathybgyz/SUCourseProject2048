@@ -1,5 +1,6 @@
 # SUCourseProject2048
 CIS667 Course Project
+
 Department of Electrical Engineering and Computer Science at Syracuse University
 
 __NOTICE__: The course project is open source for studying only. No commercial usage allowed. The basic game code is based on [Konstantin Bulenkov](http://bulenkov.com/about).
