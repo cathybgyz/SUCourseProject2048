@@ -3,15 +3,32 @@ package game2048;
 import java.awt.Color;
 
 public class Tile {
+	private int row;
+	private int col;
 	private int value;
 
     public Tile() {
-      this(0);
+    	this.row = -1;
+		this.col = -1;
+		this.value = 0;
     }
 
     public Tile(int num) {
       value = num;
     }
+    
+    /**
+	 * tile constructor
+	 * 
+	 * @param r The row index
+	 * @param c The column index
+	 * @param v The tile value
+	 */
+	public Tile(int r, int c, int v) {
+		this.row = r;
+		this.col = c;
+		this.value = v;
+	}
 
     public boolean isEmpty() {
       return value == 0;
@@ -39,11 +56,27 @@ public class Tile {
       return new Color(0xcdc1b4);
     }
     
-    public int getValue() {
-    	return value;
-    }
-    
-    public void setValue(int value) {
-    	this.value = value;
-    }
+    public int getRow() {
+		return this.row;
+	}
+
+	public int getCol() {
+		return this.col;
+	}
+
+	public int getValue() {
+		return this.value;
+	}
+	
+	public void setCol(int c) {
+		this.col = c;
+	}
+	
+	public void setRow(int r) {
+		this.row = r;
+	}
+	
+	public void setValue(int v) {
+		this.value = v;
+	}
 }
