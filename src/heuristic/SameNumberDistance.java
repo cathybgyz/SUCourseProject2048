@@ -26,7 +26,7 @@ public class SameNumberDistance implements Heuristic {
 			return 0;
 
 		double score = 0;
-		Queue<Tile> tiles = new LinkedList<>();
+		Queue<Tile> tiles = new LinkedList<>(Arrays.asList(board));
 		Set<Integer> existedValue = new HashSet<>();
 
 		for(Tile t:board) existedValue.add(t.getValue());
@@ -35,14 +35,15 @@ public class SameNumberDistance implements Heuristic {
 		for (Integer curValue : existedValue) {
 			// List of tiles with all the same value
 			List<Tile> sameValueTiles = new LinkedList<>();
-			while (tiles.size() > 0) {
+			int time = tiles.size();
+			while (time > 0 && tiles.size() > 0) {
 				Tile t = tiles.poll();
 				if (t.getValue() == curValue) {
 					sameValueTiles.add(t);
 				} else {
 					tiles.add(t);
 				}
-
+				time--;
 			}
 
 			// Continue if the value is 0
