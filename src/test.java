@@ -13,6 +13,9 @@ public class test {
 		Integer[] element = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,4,4,4,4,4,4,8,8,8,16,16,16,32,32,32,64,64,128,128,256,512,1024,2048};
 		Random rand = new Random();
 		FileWriter fw = new FileWriter("score.csv");
+		fw.append("\n");
+		fw.append("\n");
+		fw.append("\n");
 		
 		// Change the function object below
 		Heuristic func = new SameNumberDistance();
@@ -36,8 +39,8 @@ public class test {
 			fw.append(",");
 			fw.append(Double.toString(score));
 			fw.append("\n");
-			fw.close();
 			
 		}
+		fw.close();
 	}
 }
