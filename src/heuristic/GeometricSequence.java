@@ -26,6 +26,8 @@ public class GeometricSequence implements Heuristic {
 			for (int j = 0; j < 4; j++) {
 				// check right
 				if (i < 3) {
+					if (array2d[i][j]==0) continue;
+					if (array2d[i+1][j]==0) continue;
 					if (array2d[i][j] == array2d[i+1][j]*2)
 						score++;
 					else if (array2d[i][j] == array2d[i+1][j]/2)
@@ -33,6 +35,8 @@ public class GeometricSequence implements Heuristic {
 				}
 				// check bottom
 				if  (j < 3) {
+					if (array2d[i][j]==0) continue;
+					if (array2d[i][j+1]==0) continue;
 					if (array2d[i][j] == array2d[i][j+1]*2)
 						score++;
 					else if (array2d[i][j] == array2d[i][j+1]/2)
