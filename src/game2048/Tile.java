@@ -13,7 +13,7 @@ public class Tile {
 		this.value = 0;
     }
 
-    public Tile(int num) {
+    public Tile(Integer num) {
       value = num;
     }
     
@@ -24,7 +24,7 @@ public class Tile {
 	 * @param c The column index
 	 * @param v The tile value
 	 */
-	public Tile(int r, int c, int v) {
+	public Tile(int r, int c, Integer v) {
 		this.row = r;
 		this.col = c;
 		this.value = v;
