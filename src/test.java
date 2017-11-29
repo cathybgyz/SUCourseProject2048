@@ -9,7 +9,7 @@ public class test {
 	public static void main(String args[]) {
 		Tile[] input = new Tile[16];
 		int testTime = 100;
-		int[] element = {2,2,2,2,2,2,2,2,2,4,4,4,4,4,4,8,8,8,16,16,16,32,32,32,64,64,128,128,256,512,1024,2048};
+		Integer[] element = {null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,2,2,2,2,2,2,2,2,2,4,4,4,4,4,4,8,8,8,16,16,16,32,32,32,64,64,128,128,256,512,1024,2048};
 		Random rand = new Random();
 		
 		// Change the function object below

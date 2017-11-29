@@ -5,7 +5,7 @@ import java.awt.Color;
 public class Tile {
 	private int row;
 	private int col;
-	private int value;
+	private Integer value;
 
     public Tile() {
     	this.row = -1;
