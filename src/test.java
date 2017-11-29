@@ -21,7 +21,7 @@ public class test {
 			for (int i = 0; i < 4; i++) {
 				for (int j = 0; j < 4; j++) {
 					input[i*4+j] = new Tile(i,j,element[(rand.nextInt(1000)*11+23)%element.length]);
-					System.out.print(input[i*4+j].getValue()+" | ");
+					System.out.print(input[i*4+j].getValue()+"\t");
 				}
 				System.out.println();
 			}
