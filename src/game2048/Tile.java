@@ -64,7 +64,7 @@ public class Tile {
 		return this.col;
 	}
 
-	public int getValue() {
+	public Integer getValue() {
 		return this.value;
 	}
 	
@@ -76,7 +76,7 @@ public class Tile {
 		this.row = r;
 	}
 	
-	public void setValue(int v) {
+	public void setValue(Integer v) {
 		this.value = v;
 	}
 }
