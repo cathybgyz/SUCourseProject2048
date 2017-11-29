@@ -27,15 +27,17 @@ public class SameNumberDistance implements Heuristic {
 
 		double score = 0;
 		Queue<Tile> tiles = new LinkedList<>();
-		Set<Tile> existedValue = new HashSet<>(Arrays.asList(board));
+		Set<Integer> existedValue = new HashSet<>();
 
+		for(Tile t:board) existedValue.add(t.getValue());
+		
 		// Count distance of all pairs with the same value
-		for (Tile curValue : existedValue) {
+		for (Integer curValue : existedValue) {
 			// List of tiles with all the same value
 			List<Tile> sameValueTiles = new LinkedList<>();
 			while (tiles.size() > 0) {
 				Tile t = tiles.poll();
-				if (t.getValue() == curValue.getValue()) {
+				if (t.getValue() == curValue) {
 					sameValueTiles.add(t);
 				} else {
 					tiles.add(t);
@@ -44,7 +46,7 @@ public class SameNumberDistance implements Heuristic {
 			}
 
 			// Continue if the value is 0
-			if (curValue.getValue() == 0)
+			if (curValue== 0)
 				continue;
 
 			// Check tile one by one to see the shortest distance of a specific value
