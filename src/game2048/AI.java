@@ -6,6 +6,9 @@ import java.awt.Robot;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
+import heuristic.Heuristic;
+import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
+
 public class AI {
 	public static Game2048 game2048; // get your game data here!
 	public static void main(String[] args) {
@@ -23,21 +26,23 @@ public class AI {
 	    game.setLocationRelativeTo(null);
 	    game.setVisible(true);
 	    
-	    RunAi();
+	    RunAi(game2048);
 	}
   
 	public static final int MaxTimeSec = 60;
 	//
 	// TODO: figure out how to play the game in this method, game2048 has all ur data
 	//
-	public static void RunAi() {
+	public static void RunAi(Game2048 game) {
 		int secondsPassed = 0;
+		
+		
 		try {
 			while(true) {
-		  
-				//
-				// TODO: do your logic here
-				//
+				
+				// Try move and get score
+				
+				
 				
 				// then make your move with this method call!
 				MakeMove(Move.Left);
@@ -55,6 +60,12 @@ public class AI {
 			ex.printStackTrace();
 			System.exit(0);
 		}
+	}
+	
+	public Move greedy(Game2048 game) {
+		// Get 4 direction move
+		Tile[] nextBoard = new Tile[16];
+		
 	}
   
 	public static enum Move {

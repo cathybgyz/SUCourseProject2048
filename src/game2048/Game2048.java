@@ -335,6 +335,10 @@ public class Game2048 extends JPanel {
   private static int offsetCoors(int arg) {
     return arg * (TILES_MARGIN + TILE_SIZE) + TILES_MARGIN;
   }
+  
+  public Tile[] getBoard() {
+	  return myTiles;
+  }
 
 
   public static void main(String[] args) {
