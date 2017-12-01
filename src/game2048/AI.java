@@ -1,6 +1,7 @@
 package game2048;
 
 import java.awt.event.KeyEvent;
+import java.util.LinkedList;
 import java.awt.Robot;
 
 import javax.swing.JFrame;
@@ -102,4 +103,98 @@ public class AI {
 		}
 		return false;
 	}
+
+
+	private Tile[] predictLeft(Tile[] origin) {
+		Tile[] predicted = new Tile[16];
+		for (int i = 0; i < 4; i++) {
+		      Tile[] line = getLine(i,origin);
+		      Tile[] merged = mergeLine(moveLine(line));
+		      setLine(i, predicted,merged);
+		}
+		return predicted;
+	}
+	
+	private Tile[] predictRight(Tile[] origin) {
+		origin = rotate(180);
+		Tile[] predicted = predictLeft(origin);
+	    origin = rotate(180);
+	    return predicted;
+	}
+	
+	private Tile[] predictUp(Tile[] origin) {
+		origin = rotate(270);
+		Tile[] predicted = predictLeft(origin);
+	    origin = rotate(90);
+	    return predicted;
+	}
+	
+	private Tile[] predictDown(Tile[] origin) {
+		origin = rotate(90);
+		Tile[] predicted = predictLeft(origin);
+	    origin = rotate(270);
+	    return predicted;
+	}
+	
+	private  Tile[] getLine(int index,Tile[] origin) {
+		Tile[] result = new Tile[4];
+		for (int i = 0; i < 4; i++) {
+			result[i] = origin[index*4+i];
+		}
+		return result;
+	}
+	
+	  private Tile[] mergeLine(Tile[] oldLine) {
+		    LinkedList<Tile> list = new LinkedList<Tile>();
+		    for (int i = 0; i < 4 && !oldLine[i].isEmpty(); i++) {
+		      int num = oldLine[i].getValue();
+		      if (i < 3 && oldLine[i].getValue() == oldLine[i + 1].getValue()) {
+		        num *= 2;
+		        i++;
+		      }
+		      list.add(new Tile(num));
+		    }
+		    if (list.size() == 0) {
+		      return oldLine;
+		    } else {
+		      ensureSize(list, 4);
+		      return list.toArray(new Tile[4]);
+		    }
+		  }
+	  private void ensureSize(java.util.List<Tile> l, int s) {
+		    while (l.size() != s) {
+		      l.add(new Tile());
+		    }
+		  }
+	  
+	  private void setLine(int index, Tile[] origin,Tile[] re) {
+		    System.arraycopy(re, 0, origin, index * 4, 4);
+		  }
+	  
+	  private Tile[] moveLine(Tile[] oldLine) {
+		    LinkedList<Tile> l = new LinkedList<Tile>();
+		    for (int i = 0; i < 4; i++) {
+		      if (!oldLine[i].isEmpty())
+		        l.addLast(oldLine[i]);
+		    }
+		    if (l.size() == 0) {
+		      return oldLine;
+		    } else {
+		      Tile[] newLine = new Tile[4];
+		      ensureSize(l, 4);
+		      for (int i = 0; i < 4; i++) {
+		        newLine[i] = l.removeFirst();
+		      }
+		      return newLine;
+		    }
+		  }
+	  
+	  private Tile[] rotate(int angle) {
+		    Tile[] newTiles = new Tile[4 * 4];
+		    int offsetX = 3, offsetY = 3;
+		    if (angle == 90) {
+		      offsetY = 0;
+		    } else if (angle == 270) {
+		      offsetX = 0;
+		    }
 }
