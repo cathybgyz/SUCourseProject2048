@@ -1,17 +1,11 @@
 package game2048;
 
-import java.awt.event.KeyEvent;
-import java.util.PrimitiveIterator.OfDouble;
-
-import static org.junit.jupiter.api.Assumptions.assumingThat;
-
 import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.LinkedList;
 
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
-
-import heuristic.Heuristic;
-import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 
 public class AI {
 	public static Game2048 game2048; // get your game data here!
@@ -49,7 +43,6 @@ public class AI {
 				// Try move and get score
 				// then make your move with this method call!
 				MakeMove(greedy(game));
-				
 
 				// check time, since we are using Robot we need to kill it if we fail.
 				// another way to do this is create a "watchdog" thread that needs to be
@@ -73,7 +66,7 @@ public class AI {
 		int upScore = 0;
 		int downScore = 0;
 		int maxScore = 0;
-		
+
 		nextBoard = predictLeft(game.getBoard());
 		if (checkNoChange(nextBoard, game.getBoard())) {
 			leftScore = getScore(nextBoard);
@@ -102,17 +95,17 @@ public class AI {
 			if (maxScore < downScore)
 				maxScore = downScore;
 		}
-		
-		if(maxScore == leftScore)
+
+		if (maxScore == leftScore)
 			return Move.Left;
 		if (maxScore == rightScore) {
 			return Move.Right;
 		}
-		if(maxScore == upScore)
+		if (maxScore == upScore)
 			return Move.Up;
-		if(maxScore == downScore)
+		if (maxScore == downScore)
 			return Move.Down;
-		
+
 		return null;
 	}
 
@@ -161,4 +154,114 @@ public class AI {
 		}
 		return false;
 	}
+
+	private static Tile[] predictLeft(Tile[] origin) {
+		Tile[] predicted = new Tile[16];
+		for (int i = 0; i < 4; i++) {
+			Tile[] line = getLine(i, origin);
+			Tile[] merged = mergeLine(moveLine(line));
+			setLine(i, predicted, merged);
+		}
+		return predicted;
+	}
+
+	private static Tile[] predictRight(Tile[] origin) {
+		origin = rotate(origin, 180);
+		Tile[] predicted = predictLeft(origin);
+		origin = rotate(origin, 180);
+		predicted = rotate(predicted, 180);
+		return predicted;
+	}
+
+	private static Tile[] predictUp(Tile[] origin) {
+		origin = rotate(origin, 270);
+		Tile[] predicted = predictLeft(origin);
+		origin = rotate(origin, 90);
+		predicted = rotate(predicted, 90);
+		return predicted;
+	}
+
+	private static Tile[] predictDown(Tile[] origin) {
+		origin = rotate(origin, 90);
+		Tile[] predicted = predictLeft(origin);
+		origin = rotate(origin, 270);
+		predicted = rotate(predicted, 270);
+		return predicted;
+	}
+
+	private static Tile[] getLine(int index, Tile[] origin) {
+		Tile[] result = new Tile[4];
+		for (int i = 0; i < 4; i++) {
+			result[i] = origin[index * 4 + i];
+		}
+		return result;
+	}
+
+	private static Tile[] mergeLine(Tile[] oldLine) {
+		LinkedList<Tile> list = new LinkedList<Tile>();
+		for (int i = 0; i < 4 && !oldLine[i].isEmpty(); i++) {
+			int num = oldLine[i].getValue();
+			if (i < 3 && oldLine[i].getValue() == oldLine[i + 1].getValue()) {
+				num *= 2;
+				i++;
+			}
+			list.add(new Tile(num));
+		}
+		if (list.size() == 0) {
+			return oldLine;
+		} else {
+			ensureSize(list, 4);
+			return list.toArray(new Tile[4]);
+		}
+	}
+
+	private static void ensureSize(java.util.List<Tile> l, int s) {
+		while (l.size() != s) {
+			l.add(new Tile());
+		}
+	}
+
+	private static void setLine(int index, Tile[] origin, Tile[] re) {
+		System.arraycopy(re, 0, origin, index * 4, 4);
+	}
+
+	private static Tile[] moveLine(Tile[] oldLine) {
+		LinkedList<Tile> l = new LinkedList<Tile>();
+		for (int i = 0; i < 4; i++) {
+			if (!oldLine[i].isEmpty())
+				l.addLast(oldLine[i]);
+		}
+		if (l.size() == 0) {
+			return oldLine;
+		} else {
+			Tile[] newLine = new Tile[4];
+			ensureSize(l, 4);
+			for (int i = 0; i < 4; i++) {
+				newLine[i] = l.removeFirst();
+			}
+			return newLine;
+		}
+	}
+
+	private static Tile[] rotate(Tile[] target, int angle) {
+		Tile[] newTiles = new Tile[4 * 4];
+		int offsetX = 3, offsetY = 3;
+		if (angle == 90) {
+			offsetY = 0;
+		} else if (angle == 270) {
+			offsetX = 0;
+		}
+		double rad = Math.toRadians(angle);
+		int cos = (int) Math.cos(rad);
+		int sin = (int) Math.sin(rad);
+		for (int x = 0; x < 4; x++) {
+			for (int y = 0; y < 4; y++) {
+				int newX = (x * cos) - (y * sin) + offsetX;
+				int newY = (x * sin) + (y * cos) + offsetY;
+				newTiles[(newX) + (newY) * 4] = target[4 * x + y];
+			}
+		}
+		return newTiles;
+	}
+
 }
