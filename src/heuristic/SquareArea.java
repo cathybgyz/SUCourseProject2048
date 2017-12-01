@@ -27,6 +27,6 @@ public class SquareArea implements Heuristic{
 		int w = wEnd-wStart + 1;
 		int l = lEnd - lStart + 1;
 		int area = w * l;
-		return (double)area;
+		return (double)(16-area);
 	}
 }
