@@ -29,8 +29,13 @@ public class SameNumberDistance implements Heuristic {
 		Queue<Tile> tiles = new LinkedList<>(Arrays.asList(board));
 		Set<Integer> existedValue = new HashSet<>();
 
-		for(Tile t:board) existedValue.add(t.getValue());
-		
+		for (int x=0;x<4;x++){
+			for(int y=0;y<4;y++) {
+				board[x*4+y].setCol(x);
+				board[x*4+y].setRow(y);
+				existedValue.add(board[x*4+y].getValue());
+			}
+		}
 		// Count distance of all pairs with the same value
 		for (Integer curValue : existedValue) {
 			// List of tiles with all the same value
@@ -47,13 +52,12 @@ public class SameNumberDistance implements Heuristic {
 			}
 
 			// Continue if the value is 0
-			if (curValue== 0)
+			if (curValue == 0)
 				continue;
 
 			// Check tile one by one to see the shortest distance of a specific value
 			while (sameValueTiles.size() > 1) {
-				Tile t = sameValueTiles.get(0);
-				sameValueTiles.remove(0);
+				Tile t = sameValueTiles.remove(0);
 				int min = 100;
 				for (Tile cur : sameValueTiles) {
 					int distance = Math.abs(cur.getCol() - t.getCol()) + Math.abs(cur.getRow() - t.getRow());

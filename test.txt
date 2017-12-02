@@ -1,0 +1,3625 @@
+==================New Move====================
+Current board
+0	0	2	2	
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+If go left
+4	0	0	0	
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:2.0
+GeometricSequence:0.0
+MaxNumDis:2.0SameNumberDistance:0.0
+SmallNumSum:2.0
+SpaceNumber:15.0
+SquareArea:15.0
+If go right
+0	0	0	4	
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:2.0
+GeometricSequence:0.0
+MaxNumDis:2.0SameNumberDistance:0.0
+SmallNumSum:2.0
+SpaceNumber:15.0
+SquareArea:15.0
+If go up
+0	0	2	2	
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+If go down
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+0	0	2	2	
+AverageNum:1.0
+GeometricSequence:0.0
+MaxNumDis:2.0SameNumberDistance:5.0
+SmallNumSum:1.0
+SpaceNumber:14.0
+SquareArea:14.0
+==================New Move====================
+Current board
+0	0	0	0	
+0	0	0	2	
+0	0	0	0	
+0	0	2	2	
+If go left
+0	0	0	0	
+2	0	0	0	
+0	0	0	0	
+4	0	0	0	
+AverageNum:1.5
+GeometricSequence:0.0
+MaxNumDis:2.0SameNumberDistance:0.0
+SmallNumSum:1.0
+SpaceNumber:14.0
+SquareArea:13.0
+If go right
+0	0	0	0	
+0	0	0	2	
+0	0	0	0	
+0	0	0	4	
+AverageNum:1.5
+GeometricSequence:0.0
+MaxNumDis:2.0SameNumberDistance:0.0
+SmallNumSum:1.0
+SpaceNumber:14.0
+SquareArea:13.0
+If go up
+0	0	2	4	
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:1.5
+GeometricSequence:0.0
+MaxNumDis:2.0SameNumberDistance:0.0
+SmallNumSum:1.0
+SpaceNumber:14.0
+SquareArea:14.0
+If go down
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+0	0	2	4	
+AverageNum:1.5
+GeometricSequence:1.0
+MaxNumDis:2.0SameNumberDistance:0.0
+SmallNumSum:1.0
+SpaceNumber:14.0
+SquareArea:14.0
+==================New Move====================
+Current board
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+4	0	2	4	
+If go left
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+4	2	4	0	
+AverageNum:1.6666666666666667
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:4.0
+SmallNumSum:1.0
+SpaceNumber:13.0
+SquareArea:13.0
+If go right
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+0	4	2	4	
+AverageNum:1.6666666666666667
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:4.0
+SmallNumSum:1.0
+SpaceNumber:13.0
+SquareArea:13.0
+If go up
+4	0	2	4	
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:1.6666666666666667
+GeometricSequence:0.0
+MaxNumDis:2.0SameNumberDistance:3.0
+SmallNumSum:1.0
+SpaceNumber:13.0
+SquareArea:12.0
+If go down
+0	0	0	0	
+0	0	0	0	
+0	0	0	0	
+4	0	2	4	
+==================New Move====================
+Current board
+0	0	2	0	
+0	0	0	0	
+0	0	0	0	
+4	2	4	0	
+If go left
+2	0	0	0	
+0	0	0	0	
+0	0	0	0	
+4	2	4	0	
+AverageNum:1.5
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:6.0
+SmallNumSum:1.0
+SpaceNumber:12.0
+SquareArea:4.0
+If go right
+0	0	0	2	
+0	0	0	0	
+0	0	0	0	
+0	4	2	4	
+AverageNum:1.5
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:6.0
+SmallNumSum:1.0
+SpaceNumber:12.0
+SquareArea:4.0
+If go up
+4	2	2	0	
+0	0	4	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:1.5
+GeometricSequence:1.0
+MaxNumDis:2.0SameNumberDistance:8.0
+SmallNumSum:1.0
+SpaceNumber:12.0
+SquareArea:10.0
+If go down
+0	0	0	0	
+0	0	0	0	
+0	0	2	0	
+4	2	4	0	
+AverageNum:1.5
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:8.0
+SmallNumSum:1.0
+SpaceNumber:12.0
+SquareArea:10.0
+==================New Move====================
+Current board
+0	0	0	0	
+0	0	0	0	
+0	0	2	0	
+4	2	4	2	
+If go left
+0	0	0	0	
+0	0	0	0	
+2	0	0	0	
+4	2	4	2	
+AverageNum:1.4
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:12.0
+SmallNumSum:1.0
+SpaceNumber:11.0
+SquareArea:8.0
+If go right
+0	0	0	0	
+0	0	0	0	
+0	0	0	2	
+4	2	4	2	
+AverageNum:1.4
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:13.0
+SmallNumSum:1.0
+SpaceNumber:11.0
+SquareArea:8.0
+If go up
+4	2	2	2	
+0	0	4	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:1.4
+GeometricSequence:1.0
+MaxNumDis:2.0SameNumberDistance:13.0
+SmallNumSum:1.0
+SpaceNumber:11.0
+SquareArea:8.0
+If go down
+0	0	0	0	
+0	0	0	0	
+0	0	2	0	
+4	2	4	2	
+==================New Move====================
+Current board
+0	0	0	0	
+0	0	0	0	
+2	2	0	0	
+4	2	4	2	
+If go left
+0	0	0	0	
+0	0	0	0	
+4	0	0	0	
+4	2	4	2	
+AverageNum:1.6
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:13.0
+SmallNumSum:1.0
+SpaceNumber:11.0
+SquareArea:8.0
+If go right
+0	0	0	0	
+0	0	0	0	
+0	0	0	4	
+4	2	4	2	
+AverageNum:1.6
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:12.0
+SmallNumSum:1.0
+SpaceNumber:11.0
+SquareArea:8.0
+If go up
+2	4	4	2	
+4	0	0	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:1.6
+GeometricSequence:2.0
+MaxNumDis:1.0SameNumberDistance:11.0
+SmallNumSum:1.0
+SpaceNumber:11.0
+SquareArea:8.0
+If go down
+0	0	0	0	
+0	0	0	0	
+2	0	0	0	
+4	4	4	2	
+AverageNum:1.6
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:12.0
+SmallNumSum:1.0
+SpaceNumber:11.0
+SquareArea:8.0
+==================New Move====================
+Current board
+0	0	0	0	
+0	0	0	0	
+2	0	0	4	
+4	2	4	2	
+If go left
+0	0	0	0	
+0	0	0	0	
+2	4	0	0	
+4	2	4	2	
+AverageNum:1.5
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:16.0
+SmallNumSum:1.0
+SpaceNumber:10.0
+SquareArea:8.0
+If go right
+0	0	0	0	
+0	0	0	0	
+0	0	2	4	
+4	2	4	2	
+AverageNum:1.5
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:16.0
+SmallNumSum:1.0
+SpaceNumber:10.0
+SquareArea:8.0
+If go up
+2	2	4	4	
+4	0	0	2	
+0	0	0	0	
+0	0	0	0	
+AverageNum:1.5
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:15.0
+SmallNumSum:1.0
+SpaceNumber:10.0
+SquareArea:8.0
+If go down
+0	0	0	0	
+0	0	0	0	
+2	0	0	4	
+4	2	4	2	
+==================New Move====================
+Current board
+0	0	0	2	
+0	0	0	0	
+2	4	0	0	
+4	2	4	2	
+If go left
+2	0	0	0	
+0	0	0	0	
+2	4	0	0	
+4	2	4	2	
+AverageNum:1.4285714285714286
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:0.0
+If go right
+0	0	0	2	
+0	0	0	0	
+0	0	2	4	
+4	2	4	2	
+AverageNum:1.4285714285714286
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:19.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:0.0
+If go up
+2	4	4	4	
+4	2	0	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:1.6666666666666667
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:16.0
+SmallNumSum:1.0
+SpaceNumber:10.0
+SquareArea:8.0
+If go down
+0	0	0	0	
+0	0	0	0	
+2	4	0	0	
+4	2	4	4	
+AverageNum:1.6666666666666667
+GeometricSequence:5.0
+MaxNumDis:2.0SameNumberDistance:17.0
+SmallNumSum:1.0
+SpaceNumber:10.0
+SquareArea:8.0
+==================New Move====================
+Current board
+2	0	0	0	
+0	0	0	0	
+2	4	0	2	
+4	2	4	2	
+If go left
+2	0	0	0	
+0	0	0	0	
+2	4	2	0	
+4	2	4	2	
+AverageNum:1.375
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:24.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go right
+0	0	0	2	
+0	0	0	0	
+0	2	4	2	
+4	2	4	2	
+AverageNum:1.375
+GeometricSequence:5.0
+MaxNumDis:2.0SameNumberDistance:27.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go up
+4	4	4	4	
+4	2	0	0	
+0	0	0	0	
+0	0	0	0	
+AverageNum:1.8333333333333333
+GeometricSequence:1.0
+MaxNumDis:2.0SameNumberDistance:17.0
+SmallNumSum:1.0
+SpaceNumber:10.0
+SquareArea:8.0
+If go down
+0	0	0	0	
+0	0	0	0	
+4	4	0	0	
+4	2	4	4	
+AverageNum:1.8333333333333333
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:18.0
+SmallNumSum:1.0
+SpaceNumber:10.0
+SquareArea:8.0
+==================New Move====================
+Current board
+2	2	0	0	
+0	0	0	0	
+2	4	2	0	
+4	2	4	2	
+If go left
+4	0	0	0	
+0	0	0	0	
+2	4	2	0	
+4	2	4	2	
+AverageNum:1.5
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:23.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go right
+0	0	0	4	
+0	0	0	0	
+0	2	4	2	
+4	2	4	2	
+AverageNum:1.5
+GeometricSequence:5.0
+MaxNumDis:2.0SameNumberDistance:26.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go up
+4	2	2	2	
+4	4	4	0	
+0	2	0	0	
+0	0	0	0	
+AverageNum:1.5
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:27.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	2	0	0	
+4	4	2	0	
+4	2	4	2	
+AverageNum:1.5
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:25.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	0	2	0	
+0	2	0	0	
+4	4	2	0	
+4	2	4	2	
+If go left
+2	0	0	0	
+2	0	0	0	
+8	2	0	0	
+4	2	4	2	
+AverageNum:1.5
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:22.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go right
+0	0	0	2	
+0	0	0	2	
+0	0	8	2	
+4	2	4	2	
+AverageNum:1.5
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:23.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go up
+8	2	4	2	
+0	4	4	0	
+0	2	0	0	
+0	0	0	0	
+AverageNum:1.7142857142857142
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:16.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	2	0	0	
+0	4	4	0	
+8	2	4	2	
+AverageNum:1.7142857142857142
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:18.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	0	0	0	
+0	2	0	0	
+0	4	4	0	
+8	2	4	2	
+If go left
+2	0	0	0	
+2	0	0	0	
+8	0	0	0	
+8	2	4	2	
+AverageNum:1.7142857142857142
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:17.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:0.0
+If go right
+0	0	0	2	
+0	0	0	2	
+0	0	0	8	
+8	2	4	2	
+AverageNum:1.7142857142857142
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:15.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:0.0
+If go up
+2	2	8	2	
+8	4	0	0	
+0	2	0	0	
+0	0	0	0	
+AverageNum:1.7142857142857142
+GeometricSequence:2.0
+MaxNumDis:1.0SameNumberDistance:14.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	2	0	0	
+2	4	0	0	
+8	2	8	2	
+AverageNum:1.7142857142857142
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:16.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	2	0	0	
+0	2	0	0	
+2	4	0	0	
+8	2	8	2	
+If go left
+2	0	0	0	
+2	0	0	0	
+2	4	0	0	
+8	2	8	2	
+AverageNum:1.625
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:22.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go right
+0	0	0	2	
+0	0	0	2	
+0	0	2	4	
+8	2	8	2	
+AverageNum:1.625
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:21.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go up
+2	4	8	2	
+8	4	0	0	
+0	2	0	0	
+0	0	0	0	
+AverageNum:1.8571428571428572
+GeometricSequence:3.0
+MaxNumDis:1.0SameNumberDistance:13.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	4	0	0	
+2	4	0	0	
+8	2	8	2	
+AverageNum:1.8571428571428572
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:17.0
+SmallNumSum:1.0
+SpaceNumber:9.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	0	2	2	
+0	0	0	2	
+0	0	2	4	
+8	2	8	2	
+If go left
+4	0	0	0	
+2	0	0	0	
+2	4	0	0	
+8	2	8	2	
+AverageNum:1.75
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go right
+0	0	0	4	
+0	0	0	2	
+0	0	2	4	
+8	2	8	2	
+AverageNum:1.75
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go up
+8	2	4	4	
+0	0	8	4	
+0	0	0	2	
+0	0	0	0	
+AverageNum:2.0
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:15.0
+SmallNumSum:2.0
+SpaceNumber:9.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	0	0	4	
+0	0	4	4	
+8	2	8	2	
+AverageNum:2.0
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:18.0
+SmallNumSum:2.0
+SpaceNumber:9.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	0	0	4	
+0	0	0	2	
+2	0	2	4	
+8	2	8	2	
+If go left
+4	0	0	0	
+2	0	0	0	
+4	4	0	0	
+8	2	8	2	
+AverageNum:1.875
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go right
+0	0	0	4	
+0	0	0	2	
+0	0	4	4	
+8	2	8	2	
+AverageNum:1.875
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:21.0
+SmallNumSum:1.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go up
+2	2	2	4	
+8	0	8	2	
+0	0	0	4	
+0	0	0	2	
+AverageNum:1.6666666666666667
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:26.0
+SmallNumSum:1.0
+SpaceNumber:7.0
+SquareArea:0.0
+If go down
+0	0	0	4	
+0	0	0	2	
+2	0	2	4	
+8	2	8	2	
+==================New Move====================
+Current board
+0	0	0	4	
+0	2	0	2	
+0	0	4	4	
+8	2	8	2	
+If go left
+4	0	0	0	
+4	0	0	0	
+8	0	0	0	
+8	2	8	2	
+AverageNum:2.142857142857143
+GeometricSequence:1.0
+MaxNumDis:2.0SameNumberDistance:18.0
+SmallNumSum:2.0
+SpaceNumber:9.0
+SquareArea:0.0
+If go right
+0	0	0	4	
+0	0	0	4	
+0	0	0	8	
+8	2	8	2	
+AverageNum:2.142857142857143
+GeometricSequence:1.0
+MaxNumDis:2.0SameNumberDistance:17.0
+SmallNumSum:2.0
+SpaceNumber:9.0
+SquareArea:0.0
+If go up
+8	4	4	4	
+0	0	8	2	
+0	0	0	4	
+0	0	0	2	
+AverageNum:2.0
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:21.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go down
+0	0	0	4	
+0	0	0	2	
+0	0	4	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	0	4	4	
+0	0	0	2	
+0	0	4	4	
+8	4	8	2	
+If go left
+8	0	0	0	
+2	0	0	0	
+8	0	0	0	
+8	4	8	2	
+AverageNum:2.2857142857142856
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:14.0
+SmallNumSum:2.0
+SpaceNumber:9.0
+SquareArea:0.0
+If go right
+0	0	0	8	
+0	0	0	2	
+0	0	0	8	
+8	4	8	2	
+AverageNum:2.2857142857142856
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:16.0
+SmallNumSum:2.0
+SpaceNumber:9.0
+SquareArea:0.0
+If go up
+8	4	8	4	
+0	0	8	2	
+0	0	0	4	
+0	0	0	2	
+AverageNum:2.125
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:21.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go down
+0	0	0	4	
+0	0	0	2	
+0	0	8	4	
+8	4	8	2	
+AverageNum:2.125
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	0	0	4	
+0	0	0	2	
+2	0	8	4	
+8	4	8	2	
+If go left
+4	0	0	0	
+2	0	0	0	
+2	8	4	0	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:21.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:0.0
+If go right
+0	0	0	4	
+0	0	0	2	
+0	2	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:0.0
+If go up
+2	4	16	4	
+8	0	0	2	
+0	0	0	4	
+0	0	0	2	
+AverageNum:2.0
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:14.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go down
+0	0	0	4	
+0	0	0	2	
+2	0	0	4	
+8	4	16	2	
+AverageNum:2.0
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:13.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	0	0	4	
+0	0	0	2	
+2	2	8	4	
+8	4	8	2	
+If go left
+4	0	0	0	
+2	0	0	0	
+4	8	4	0	
+8	4	8	2	
+AverageNum:2.111111111111111
+GeometricSequence:9.0
+MaxNumDis:2.0SameNumberDistance:21.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:0.0
+If go right
+0	0	0	4	
+0	0	0	2	
+0	4	8	4	
+8	4	8	2	
+AverageNum:2.111111111111111
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:0.0
+If go up
+2	2	16	4	
+8	4	0	2	
+0	0	0	4	
+0	0	0	2	
+AverageNum:1.8888888888888888
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:19.0
+SmallNumSum:1.0
+SpaceNumber:7.0
+SquareArea:0.0
+If go down
+0	0	0	4	
+0	0	0	2	
+2	2	0	4	
+8	4	16	2	
+AverageNum:1.8888888888888888
+GeometricSequence:5.0
+MaxNumDis:1.0SameNumberDistance:19.0
+SmallNumSum:1.0
+SpaceNumber:7.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	0	0	4	
+0	0	0	2	
+2	4	8	4	
+8	4	8	2	
+If go left
+4	0	0	0	
+2	0	0	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:27.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go right
+0	0	0	4	
+0	0	0	2	
+2	4	8	4	
+8	4	8	2	
+If go up
+2	8	16	4	
+8	0	0	2	
+0	0	0	4	
+0	0	0	2	
+AverageNum:2.125
+GeometricSequence:3.0
+MaxNumDis:1.0SameNumberDistance:14.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go down
+0	0	0	4	
+0	0	0	2	
+2	0	0	4	
+8	8	16	2	
+AverageNum:2.125
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:15.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+==================New Move====================
+Current board
+4	0	4	0	
+2	0	0	0	
+2	4	8	4	
+8	4	8	2	
+If go left
+8	0	0	0	
+2	0	0	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.1
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:27.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go right
+0	0	0	8	
+0	0	0	2	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.1
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:26.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go up
+4	8	4	4	
+4	0	16	2	
+8	0	0	0	
+0	0	0	0	
+AverageNum:2.375
+GeometricSequence:3.0
+MaxNumDis:0.0SameNumberDistance:15.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+4	0	0	0	
+4	0	4	4	
+8	8	16	2	
+AverageNum:2.375
+GeometricSequence:3.0
+MaxNumDis:1.0SameNumberDistance:19.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	0	0	8	
+0	0	0	2	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	0	0	
+2	0	0	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:6.0
+MaxNumDis:2.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:0.0
+If go right
+0	0	2	8	
+0	0	0	2	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:0.0
+If go up
+4	8	16	8	
+8	0	0	2	
+0	0	0	4	
+0	0	0	2	
+AverageNum:2.375
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:11.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+If go down
+0	0	0	8	
+0	0	0	2	
+4	0	0	4	
+8	8	16	2	
+AverageNum:2.375
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:13.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	8	2	0	
+2	0	0	0	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	2	0	
+2	0	0	0	
+2	4	8	4	
+8	4	8	2	
+If go right
+0	2	8	2	
+0	0	0	2	
+2	4	8	4	
+8	4	8	2	
+AverageNum:1.9166666666666667
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:36.0
+SmallNumSum:1.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go up
+4	8	2	4	
+2	8	16	2	
+8	0	0	0	
+0	0	0	0	
+AverageNum:2.2222222222222223
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:19.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+2	0	0	0	
+4	8	2	4	
+8	8	16	2	
+AverageNum:2.2222222222222223
+GeometricSequence:6.0
+MaxNumDis:1.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	2	8	2	
+2	0	0	2	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	2	0	
+4	0	0	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go right
+0	2	8	2	
+0	0	0	4	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:35.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go up
+4	2	16	4	
+8	8	8	4	
+0	0	0	2	
+0	0	0	0	
+AverageNum:2.3333333333333335
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	0	0	4	
+4	2	8	4	
+8	8	16	2	
+AverageNum:2.3333333333333335
+GeometricSequence:6.0
+MaxNumDis:1.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	2	8	2	
+2	0	0	4	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	2	0	
+2	4	0	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:1.9230769230769231
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:40.0
+SmallNumSum:1.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go right
+0	2	8	2	
+0	0	2	4	
+2	4	8	4	
+8	4	8	2	
+AverageNum:1.9230769230769231
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:39.0
+SmallNumSum:1.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go up
+4	2	16	2	
+8	8	8	8	
+0	0	0	2	
+0	0	0	0	
+AverageNum:2.3333333333333335
+GeometricSequence:3.0
+MaxNumDis:1.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	0	0	2	
+4	2	8	8	
+8	8	16	2	
+AverageNum:2.3333333333333335
+GeometricSequence:4.0
+MaxNumDis:1.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	8	2	2	
+2	4	0	0	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	4	0	
+2	4	0	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:9.0
+MaxNumDis:2.0SameNumberDistance:41.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go right
+0	2	8	4	
+0	0	2	4	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:40.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go up
+4	8	2	2	
+2	8	16	4	
+8	4	0	2	
+0	0	0	0	
+AverageNum:2.090909090909091
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:26.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+2	8	0	2	
+4	4	2	4	
+8	8	16	2	
+AverageNum:2.090909090909091
+GeometricSequence:9.0
+MaxNumDis:1.0SameNumberDistance:29.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	8	4	2	
+2	4	0	0	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	4	2	
+2	4	0	0	
+2	4	8	4	
+8	4	8	2	
+If go right
+2	8	4	2	
+0	0	2	4	
+2	4	8	4	
+8	4	8	2	
+AverageNum:1.9285714285714286
+GeometricSequence:10.0
+MaxNumDis:2.0SameNumberDistance:42.0
+SmallNumSum:1.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+4	8	4	2	
+2	8	16	4	
+8	4	0	2	
+0	0	0	0	
+AverageNum:2.1818181818181817
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:26.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+2	8	0	2	
+4	4	4	4	
+8	8	16	2	
+AverageNum:2.1818181818181817
+GeometricSequence:7.0
+MaxNumDis:1.0SameNumberDistance:31.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	8	4	2	
+0	2	2	4	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	4	2	
+4	4	0	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:10.0
+MaxNumDis:2.0SameNumberDistance:43.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+2	8	4	2	
+0	0	4	4	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:9.0
+MaxNumDis:2.0SameNumberDistance:44.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+4	8	4	2	
+8	2	2	8	
+0	8	16	2	
+0	0	0	0	
+AverageNum:2.1818181818181817
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:28.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	8	4	2	
+4	2	2	8	
+8	8	16	2	
+AverageNum:2.1818181818181817
+GeometricSequence:6.0
+MaxNumDis:1.0SameNumberDistance:28.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	8	4	2	
+4	4	0	2	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	4	2	
+8	2	0	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:41.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+2	8	4	2	
+0	0	8	2	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:9.0
+MaxNumDis:2.0SameNumberDistance:44.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+2	8	4	4	
+4	8	16	4	
+2	4	0	2	
+8	0	0	0	
+AverageNum:2.1666666666666665
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go down
+2	0	0	0	
+4	8	0	4	
+2	4	4	4	
+8	8	16	2	
+AverageNum:2.1666666666666665
+GeometricSequence:8.0
+MaxNumDis:1.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	8	4	2	
+0	2	8	2	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	4	2	
+2	8	2	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:1.9333333333333333
+GeometricSequence:10.0
+MaxNumDis:2.0SameNumberDistance:48.0
+SmallNumSum:1.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+2	8	4	2	
+0	2	8	2	
+2	4	8	4	
+8	4	8	2	
+If go up
+4	8	4	4	
+8	2	16	4	
+0	8	8	2	
+0	0	0	0	
+AverageNum:2.3636363636363638
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	8	4	4	
+4	2	8	4	
+8	8	16	2	
+AverageNum:2.3636363636363638
+GeometricSequence:8.0
+MaxNumDis:1.0SameNumberDistance:29.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	8	4	2	
+2	8	2	2	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	4	2	
+2	8	4	0	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:11.0
+MaxNumDis:2.0SameNumberDistance:50.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+2	8	4	2	
+0	2	8	4	
+2	4	8	4	
+8	4	8	2	
+AverageNum:2.0
+GeometricSequence:12.0
+MaxNumDis:2.0SameNumberDistance:48.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+4	16	4	4	
+2	8	2	4	
+8	0	16	2	
+0	0	0	0	
+AverageNum:2.272727272727273
+GeometricSequence:5.0
+MaxNumDis:1.0SameNumberDistance:29.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+2	0	4	4	
+4	16	2	4	
+8	8	16	2	
+AverageNum:2.272727272727273
+GeometricSequence:7.0
+MaxNumDis:1.0SameNumberDistance:29.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	8	4	2	
+2	8	4	2	
+2	4	8	4	
+8	4	8	2	
+If go left
+2	8	4	2	
+2	8	4	2	
+2	4	8	4	
+8	4	8	2	
+If go right
+2	8	4	2	
+2	8	4	2	
+2	4	8	4	
+8	4	8	2	
+If go up
+4	16	8	4	
+2	8	16	4	
+8	0	0	2	
+0	0	0	0	
+AverageNum:2.5
+GeometricSequence:6.0
+MaxNumDis:1.0SameNumberDistance:22.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+2	0	0	4	
+4	16	8	4	
+8	8	16	2	
+AverageNum:2.5
+GeometricSequence:8.0
+MaxNumDis:1.0SameNumberDistance:22.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	0	0	0	
+2	2	0	4	
+4	16	8	4	
+8	8	16	2	
+If go left
+0	0	0	0	
+4	4	0	0	
+4	16	8	4	
+16	16	2	0	
+AverageNum:2.6666666666666665
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:22.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go right
+0	0	0	0	
+0	0	4	4	
+4	16	8	4	
+0	16	16	2	
+AverageNum:2.6666666666666665
+GeometricSequence:5.0
+MaxNumDis:1.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go up
+2	2	8	8	
+4	16	16	2	
+8	8	0	0	
+0	0	0	0	
+AverageNum:2.5
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+2	2	0	0	
+4	16	8	8	
+8	8	16	2	
+AverageNum:2.5
+GeometricSequence:6.0
+MaxNumDis:1.0SameNumberDistance:24.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+==================New Move====================
+Current board
+2	0	0	0	
+2	2	0	0	
+4	16	8	8	
+8	8	16	2	
+If go left
+2	0	0	0	
+4	0	0	0	
+4	16	16	0	
+16	16	2	0	
+AverageNum:2.75
+GeometricSequence:1.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:4.0
+If go right
+0	0	0	2	
+0	0	0	4	
+0	4	16	16	
+0	16	16	2	
+AverageNum:2.75
+GeometricSequence:1.0
+MaxNumDis:1.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:4.0
+If go up
+4	2	8	8	
+4	16	16	2	
+8	8	0	0	
+0	0	0	0	
+AverageNum:2.6
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+4	2	0	0	
+4	16	8	8	
+8	8	16	2	
+AverageNum:2.6
+GeometricSequence:6.0
+MaxNumDis:1.0SameNumberDistance:24.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	0	0	0	
+4	2	0	2	
+4	16	8	8	
+8	8	16	2	
+If go left
+0	0	0	0	
+4	4	0	0	
+4	16	16	0	
+16	16	2	0	
+AverageNum:2.875
+GeometricSequence:0.0
+MaxNumDis:2.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:7.0
+If go right
+0	0	0	0	
+0	0	4	4	
+0	4	16	16	
+0	16	16	2	
+AverageNum:2.875
+GeometricSequence:0.0
+MaxNumDis:1.0SameNumberDistance:22.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:7.0
+If go up
+8	2	8	2	
+8	16	16	8	
+0	8	0	2	
+0	0	0	0	
+AverageNum:2.6
+GeometricSequence:2.0
+MaxNumDis:0.0SameNumberDistance:29.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	2	0	2	
+8	16	8	8	
+8	8	16	2	
+AverageNum:2.6
+GeometricSequence:5.0
+MaxNumDis:1.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	2	0	0	
+0	2	0	2	
+8	16	8	8	
+8	8	16	2	
+If go left
+2	0	0	0	
+4	0	0	0	
+8	16	16	0	
+16	16	2	0	
+AverageNum:2.875
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:15.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:4.0
+If go right
+0	0	0	2	
+0	0	0	4	
+0	8	16	16	
+0	16	16	2	
+AverageNum:2.875
+GeometricSequence:3.0
+MaxNumDis:1.0SameNumberDistance:17.0
+SmallNumSum:2.0
+SpaceNumber:8.0
+SquareArea:4.0
+If go up
+16	4	8	2	
+0	16	16	8	
+0	8	0	2	
+0	0	0	0	
+AverageNum:2.7777777777777777
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	4	0	2	
+0	16	8	8	
+16	8	16	2	
+AverageNum:2.7777777777777777
+GeometricSequence:5.0
+MaxNumDis:2.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	0	0	0	
+0	4	2	2	
+0	16	8	8	
+16	8	16	2	
+If go left
+0	0	0	0	
+4	4	0	0	
+16	16	0	0	
+16	8	16	2	
+AverageNum:3.0
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:18.0
+SmallNumSum:3.0
+SpaceNumber:8.0
+SquareArea:4.0
+If go right
+0	0	0	0	
+0	0	4	4	
+0	0	16	16	
+16	8	16	2	
+AverageNum:3.0
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:18.0
+SmallNumSum:3.0
+SpaceNumber:8.0
+SquareArea:4.0
+If go up
+16	4	2	2	
+0	16	8	8	
+0	8	16	2	
+0	0	0	0	
+AverageNum:2.6
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	4	2	2	
+0	16	8	8	
+16	8	16	2	
+==================New Move====================
+Current board
+16	4	2	2	
+0	16	8	8	
+0	8	16	2	
+0	0	0	2	
+If go left
+16	4	4	0	
+16	16	0	0	
+8	16	2	0	
+2	0	0	0	
+AverageNum:2.7777777777777777
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go right
+0	16	4	4	
+0	0	16	16	
+0	8	16	2	
+0	0	0	2	
+AverageNum:2.7777777777777777
+GeometricSequence:0.0
+MaxNumDis:1.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go up
+16	4	2	2	
+0	16	8	8	
+0	8	16	4	
+0	0	0	0	
+AverageNum:2.7
+GeometricSequence:5.0
+MaxNumDis:2.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	4	2	2	
+0	16	8	8	
+16	8	16	4	
+AverageNum:2.7
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	0	0	0	
+2	4	2	2	
+0	16	8	8	
+16	8	16	4	
+If go left
+0	0	0	0	
+2	4	4	0	
+16	16	0	0	
+16	8	16	4	
+AverageNum:2.888888888888889
+GeometricSequence:4.0
+MaxNumDis:2.0SameNumberDistance:21.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go right
+0	0	0	0	
+0	2	4	4	
+0	0	16	16	
+16	8	16	4	
+AverageNum:2.888888888888889
+GeometricSequence:2.0
+MaxNumDis:2.0SameNumberDistance:22.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go up
+2	4	2	2	
+16	16	8	8	
+0	8	16	4	
+0	0	0	0	
+AverageNum:2.5454545454545454
+GeometricSequence:6.0
+MaxNumDis:1.0SameNumberDistance:28.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	4	2	2	
+2	16	8	8	
+16	8	16	4	
+AverageNum:2.5454545454545454
+GeometricSequence:7.0
+MaxNumDis:2.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+==================New Move====================
+Current board
+0	2	0	0	
+0	4	2	2	
+2	16	8	8	
+16	8	16	4	
+If go left
+2	0	0	0	
+4	4	0	0	
+2	16	16	0	
+16	8	16	4	
+AverageNum:2.7
+GeometricSequence:5.0
+MaxNumDis:2.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go right
+0	0	0	2	
+0	0	4	4	
+0	2	16	16	
+16	8	16	4	
+AverageNum:2.7
+GeometricSequence:3.0
+MaxNumDis:2.0SameNumberDistance:24.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go up
+2	2	2	2	
+16	4	8	8	
+0	16	16	4	
+0	8	0	0	
+AverageNum:2.4166666666666665
+GeometricSequence:5.0
+MaxNumDis:1.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go down
+0	2	0	0	
+0	4	2	2	
+2	16	8	8	
+16	8	16	4	
+==================New Move====================
+Current board
+2	2	2	2	
+16	4	8	8	
+0	16	16	4	
+0	8	4	0	
+If go left
+4	4	0	0	
+16	4	16	0	
+32	4	0	0	
+8	4	0	0	
+AverageNum:2.888888888888889
+GeometricSequence:2.0
+MaxNumDis:1.0SameNumberDistance:24.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go right
+0	0	4	4	
+0	16	4	16	
+0	0	32	4	
+0	0	8	4	
+AverageNum:2.888888888888889
+GeometricSequence:1.0
+MaxNumDis:0.0SameNumberDistance:22.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go up
+2	2	2	2	
+16	4	8	8	
+0	16	16	4	
+0	8	4	0	
+If go down
+0	2	2	0	
+0	4	8	2	
+2	16	16	8	
+16	8	4	4	
+AverageNum:2.3846153846153846
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	2	2	0	
+0	4	8	2	
+2	16	16	8	
+16	8	4	4	
+If go left
+4	2	0	0	
+4	8	2	0	
+2	32	8	0	
+16	8	8	0	
+AverageNum:2.5454545454545454
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:26.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go right
+0	0	2	4	
+0	4	8	2	
+0	2	32	8	
+0	16	8	8	
+AverageNum:2.5454545454545454
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:24.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go up
+4	2	2	2	
+16	4	8	8	
+0	16	16	4	
+0	8	4	0	
+AverageNum:2.4615384615384617
+GeometricSequence:7.0
+MaxNumDis:1.0SameNumberDistance:37.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go down
+0	2	2	0	
+0	4	8	2	
+4	16	16	8	
+16	8	4	4	
+AverageNum:2.4615384615384617
+GeometricSequence:8.0
+MaxNumDis:2.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	2	2	0	
+0	4	8	2	
+4	16	16	8	
+16	8	4	4	
+If go left
+4	2	0	0	
+4	8	2	0	
+4	32	8	0	
+16	8	8	0	
+AverageNum:2.6363636363636362
+GeometricSequence:3.0
+MaxNumDis:0.0SameNumberDistance:28.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go right
+0	0	2	4	
+0	4	8	2	
+0	4	32	8	
+0	16	8	8	
+AverageNum:2.6363636363636362
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:26.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go up
+2	2	2	2	
+4	4	8	8	
+16	16	16	4	
+0	8	4	0	
+AverageNum:2.357142857142857
+GeometricSequence:7.0
+MaxNumDis:1.0SameNumberDistance:44.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go down
+0	2	2	0	
+2	4	8	2	
+4	16	16	8	
+16	8	4	4	
+AverageNum:2.357142857142857
+GeometricSequence:10.0
+MaxNumDis:2.0SameNumberDistance:39.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+==================New Move====================
+Current board
+4	2	2	0	
+2	4	8	2	
+4	16	16	8	
+16	8	4	4	
+If go left
+4	4	0	0	
+2	4	8	2	
+4	32	8	0	
+16	8	8	0	
+AverageNum:2.5833333333333335
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go right
+0	0	4	4	
+2	4	8	2	
+0	4	32	8	
+0	16	8	8	
+AverageNum:2.5833333333333335
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go up
+4	2	2	2	
+2	4	8	8	
+4	16	16	4	
+16	8	4	0	
+AverageNum:2.3333333333333335
+GeometricSequence:11.0
+MaxNumDis:2.0SameNumberDistance:42.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go down
+4	2	2	0	
+2	4	8	2	
+4	16	16	8	
+16	8	4	4	
+==================New Move====================
+Current board
+4	2	2	2	
+2	4	8	8	
+4	16	16	4	
+16	8	4	2	
+If go left
+4	4	2	0	
+2	4	16	0	
+4	32	4	0	
+16	8	4	2	
+AverageNum:2.3846153846153846
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:29.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go right
+0	4	2	4	
+0	2	4	16	
+0	4	32	4	
+16	8	4	2	
+AverageNum:2.3846153846153846
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:27.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go up
+4	2	2	2	
+2	4	8	8	
+4	16	16	4	
+16	8	4	2	
+If go down
+4	2	2	2	
+2	4	8	8	
+4	16	16	4	
+16	8	4	2	
+==================New Move====================
+Current board
+0	4	2	4	
+0	2	4	16	
+2	4	32	4	
+16	8	4	2	
+If go left
+4	2	4	0	
+2	4	16	0	
+2	4	32	4	
+16	8	4	2	
+AverageNum:2.2857142857142856
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+0	4	2	4	
+0	2	4	16	
+2	4	32	4	
+16	8	4	2	
+If go up
+2	4	2	4	
+16	2	4	16	
+0	4	32	4	
+0	8	4	2	
+AverageNum:2.2857142857142856
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go down
+0	4	2	4	
+0	2	4	16	
+2	4	32	4	
+16	8	4	2	
+==================New Move====================
+Current board
+4	2	4	0	
+2	4	16	2	
+2	4	32	4	
+16	8	4	2	
+If go left
+4	2	4	0	
+2	4	16	2	
+2	4	32	4	
+16	8	4	2	
+If go right
+0	4	2	4	
+2	4	16	2	
+2	4	32	4	
+16	8	4	2	
+AverageNum:2.2
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:39.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+4	2	4	2	
+4	8	16	4	
+16	8	32	2	
+0	0	4	0	
+AverageNum:2.4615384615384617
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:31.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go down
+0	0	4	0	
+4	2	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.4615384615384617
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	4	2	4	
+2	4	16	2	
+2	4	32	4	
+16	8	4	2	
+If go left
+2	4	2	4	
+2	4	16	2	
+2	4	32	4	
+16	8	4	2	
+If go right
+2	4	2	4	
+2	4	16	2	
+2	4	32	4	
+16	8	4	2	
+If go up
+4	8	2	4	
+2	4	16	2	
+16	8	32	4	
+0	0	4	2	
+AverageNum:2.357142857142857
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go down
+0	0	2	4	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.357142857142857
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	0	2	4	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+If go left
+4	4	0	0	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.4285714285714284
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:35.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+0	0	4	4	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.4285714285714284
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+4	4	2	4	
+4	16	16	2	
+16	0	32	4	
+0	0	4	2	
+AverageNum:2.4615384615384617
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:35.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go down
+0	0	2	4	
+4	0	16	2	
+4	4	32	4	
+16	16	4	2	
+AverageNum:2.4615384615384617
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:38.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+==================New Move====================
+Current board
+4	4	0	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+If go left
+8	2	0	0	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.4285714285714284
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+0	0	8	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.4285714285714284
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+4	8	16	4	
+2	16	32	4	
+4	0	4	2	
+16	0	0	0	
+AverageNum:2.6666666666666665
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:26.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go down
+4	0	0	0	
+2	0	16	4	
+4	8	32	4	
+16	16	4	2	
+AverageNum:2.6666666666666665
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	0	8	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+If go left
+2	8	2	0	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.3333333333333335
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:38.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	2	8	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.3333333333333335
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:37.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+4	4	8	4	
+4	16	16	4	
+16	0	32	2	
+0	0	4	0	
+AverageNum:2.75
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:28.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go down
+0	0	8	0	
+4	0	16	4	
+4	4	32	4	
+16	16	4	2	
+AverageNum:2.75
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:31.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	2	8	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+If go left
+4	8	2	0	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.4
+GeometricSequence:13.0
+MaxNumDis:0.0SameNumberDistance:37.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	4	8	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.4
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:38.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+4	2	8	4	
+4	4	16	4	
+16	16	32	2	
+0	0	4	0	
+AverageNum:2.6153846153846154
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go down
+0	0	8	0	
+4	2	16	4	
+4	4	32	4	
+16	16	4	2	
+AverageNum:2.6153846153846154
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+==================New Move====================
+Current board
+4	8	2	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+If go left
+4	8	4	0	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.466666666666667
+GeometricSequence:14.0
+MaxNumDis:0.0SameNumberDistance:37.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	4	8	4	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+AverageNum:2.466666666666667
+GeometricSequence:14.0
+MaxNumDis:0.0SameNumberDistance:37.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+4	8	2	4	
+2	4	16	4	
+4	16	32	2	
+16	0	4	0	
+AverageNum:2.5
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go down
+4	0	2	0	
+2	8	16	4	
+4	4	32	4	
+16	16	4	2	
+AverageNum:2.5
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+==================New Move====================
+Current board
+4	8	4	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+If go left
+4	8	4	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+If go right
+4	8	4	2	
+2	4	16	2	
+4	8	32	4	
+16	8	4	2	
+If go up
+4	8	4	4	
+2	4	16	4	
+4	16	32	2	
+16	0	4	0	
+AverageNum:2.5714285714285716
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go down
+4	0	4	0	
+2	8	16	4	
+4	4	32	4	
+16	16	4	2	
+AverageNum:2.5714285714285716
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:35.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+==================New Move====================
+Current board
+4	8	4	4	
+2	4	16	4	
+4	16	32	2	
+16	0	4	2	
+If go left
+4	8	8	0	
+2	4	16	4	
+4	16	32	2	
+16	4	2	0	
+AverageNum:2.5714285714285716
+GeometricSequence:10.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+0	4	8	8	
+2	4	16	4	
+4	16	32	2	
+0	16	4	2	
+AverageNum:2.5714285714285716
+GeometricSequence:9.0
+MaxNumDis:0.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+4	8	4	8	
+2	4	16	4	
+4	16	32	0	
+16	0	4	0	
+AverageNum:2.769230769230769
+GeometricSequence:9.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go down
+4	0	4	0	
+2	8	16	0	
+4	4	32	8	
+16	16	4	4	
+AverageNum:2.769230769230769
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	4	8	8	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+If go left
+4	16	0	0	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+AverageNum:2.5
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:39.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+0	0	4	16	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+AverageNum:2.5
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:39.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+2	8	8	8	
+4	32	16	4	
+2	0	32	4	
+0	0	4	0	
+AverageNum:2.75
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go down
+0	0	8	0	
+2	0	16	8	
+4	8	32	4	
+2	32	4	4	
+AverageNum:2.75
+GeometricSequence:7.0
+MaxNumDis:1.0SameNumberDistance:28.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+==================New Move====================
+Current board
+4	16	0	2	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+If go left
+4	16	2	0	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+AverageNum:2.4
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:42.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	4	16	2	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+AverageNum:2.4
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:45.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+4	16	16	2	
+2	4	32	4	
+4	32	4	4	
+2	0	0	0	
+AverageNum:2.5384615384615383
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:37.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go down
+4	0	0	0	
+2	16	16	2	
+4	4	32	4	
+2	32	4	4	
+AverageNum:2.5384615384615383
+GeometricSequence:5.0
+MaxNumDis:1.0SameNumberDistance:37.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	4	16	2	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+If go left
+2	4	16	2	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+If go right
+2	4	16	2	
+2	4	16	4	
+4	16	32	2	
+2	16	4	2	
+If go up
+4	8	32	2	
+4	32	32	4	
+2	0	4	4	
+0	0	0	0	
+AverageNum:2.727272727272727
+GeometricSequence:3.0
+MaxNumDis:1.0SameNumberDistance:29.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+4	0	32	2	
+4	8	32	4	
+2	32	4	4	
+AverageNum:2.727272727272727
+GeometricSequence:3.0
+MaxNumDis:1.0SameNumberDistance:28.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:4.0
+==================New Move====================
+Current board
+4	8	32	2	
+4	32	32	4	
+2	0	4	4	
+0	0	0	2	
+If go left
+4	8	32	2	
+4	64	4	0	
+2	8	0	0	
+2	0	0	0	
+AverageNum:2.6
+GeometricSequence:2.0
+MaxNumDis:0.0SameNumberDistance:19.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go right
+4	8	32	2	
+0	4	64	4	
+0	0	2	8	
+0	0	0	2	
+AverageNum:2.6
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:17.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go up
+8	8	64	2	
+2	32	4	8	
+0	0	0	2	
+0	0	0	0	
+AverageNum:2.7777777777777777
+GeometricSequence:0.0
+MaxNumDis:1.0SameNumberDistance:14.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	0	0	2	
+8	8	64	8	
+2	32	4	2	
+AverageNum:2.7777777777777777
+GeometricSequence:1.0
+MaxNumDis:0.0SameNumberDistance:16.0
+SmallNumSum:2.0
+SpaceNumber:7.0
+SquareArea:4.0
+==================New Move====================
+Current board
+4	8	32	2	
+0	4	64	4	
+0	2	2	8	
+0	0	0	2	
+If go left
+4	8	32	2	
+4	64	4	0	
+4	8	0	0	
+2	0	0	0	
+AverageNum:2.7
+GeometricSequence:3.0
+MaxNumDis:0.0SameNumberDistance:17.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go right
+4	8	32	2	
+0	4	64	4	
+0	0	4	8	
+0	0	0	2	
+AverageNum:2.7
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:17.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go up
+4	8	32	2	
+0	4	64	4	
+0	2	2	8	
+0	0	0	2	
+If go down
+0	0	0	2	
+0	8	32	4	
+0	4	64	8	
+4	2	2	2	
+AverageNum:2.4545454545454546
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	0	0	2	
+0	8	32	4	
+4	4	64	8	
+4	2	2	2	
+If go left
+2	0	0	0	
+8	32	4	0	
+8	64	8	0	
+4	4	2	0	
+AverageNum:2.8
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:18.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go right
+0	0	0	2	
+0	8	32	4	
+0	8	64	8	
+0	4	2	4	
+AverageNum:2.8
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:19.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go up
+8	8	32	2	
+0	4	64	4	
+0	2	2	8	
+0	0	0	2	
+AverageNum:2.5454545454545454
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:0.0
+If go down
+0	0	0	2	
+0	8	32	4	
+0	4	64	8	
+8	2	2	2	
+AverageNum:2.5454545454545454
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:21.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	0	0	2	
+0	8	32	4	
+0	8	64	8	
+0	4	2	4	
+If go left
+4	0	0	0	
+8	32	4	0	
+8	64	8	0	
+4	2	4	0	
+AverageNum:2.9
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:20.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go right
+0	0	0	4	
+0	8	32	4	
+0	8	64	8	
+0	4	2	4	
+AverageNum:2.9
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:22.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:4.0
+If go up
+2	16	32	2	
+0	4	64	4	
+0	0	2	8	
+0	0	0	4	
+AverageNum:2.7
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:14.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+If go down
+0	0	0	2	
+0	0	32	4	
+0	16	64	8	
+2	4	2	4	
+AverageNum:2.7
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:14.0
+SmallNumSum:2.0
+SpaceNumber:6.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	0	0	4	
+0	8	32	4	
+2	8	64	8	
+0	4	2	4	
+If go left
+4	0	0	0	
+8	32	4	0	
+2	8	64	8	
+4	2	4	0	
+AverageNum:2.727272727272727
+GeometricSequence:4.0
+MaxNumDis:0.0SameNumberDistance:23.0
+SmallNumSum:2.0
+SpaceNumber:5.0
+SquareArea:0.0
+If go right
+0	0	0	4	
+0	8	32	4	
+2	8	64	8	
+0	4	2	4	
+If go up
+2	16	32	8	
+0	4	64	8	
+0	0	2	4	
+0	0	0	0	
+AverageNum:3.0
+GeometricSequence:3.0
+MaxNumDis:0.0SameNumberDistance:10.0
+SmallNumSum:3.0
+SpaceNumber:7.0
+SquareArea:4.0
+If go down
+0	0	0	0	
+0	0	32	8	
+0	16	64	8	
+2	4	2	4	
+AverageNum:3.0
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:13.0
+SmallNumSum:3.0
+SpaceNumber:7.0
+SquareArea:4.0
+==================New Move====================
+Current board
+4	0	0	0	
+8	32	4	2	
+2	8	64	8	
+4	2	4	0	
+If go left
+4	0	0	0	
+8	32	4	2	
+2	8	64	8	
+4	2	4	0	
+If go right
+0	0	0	4	
+8	32	4	2	
+2	8	64	8	
+0	4	2	4	
+AverageNum:2.5833333333333335
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go up
+4	32	4	2	
+8	8	64	8	
+2	2	4	0	
+4	0	0	0	
+AverageNum:2.5833333333333335
+GeometricSequence:3.0
+MaxNumDis:0.0SameNumberDistance:27.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+If go down
+4	0	0	0	
+8	32	4	0	
+2	8	64	2	
+4	2	4	8	
+AverageNum:2.5833333333333335
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:25.0
+SmallNumSum:2.0
+SpaceNumber:4.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	2	0	4	
+8	32	4	2	
+2	8	64	8	
+0	4	2	4	
+If go left
+2	4	0	0	
+8	32	4	2	
+2	8	64	8	
+4	2	4	0	
+AverageNum:2.4615384615384617
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go right
+0	0	2	4	
+8	32	4	2	
+2	8	64	8	
+0	4	2	4	
+AverageNum:2.4615384615384617
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:29.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go up
+8	2	4	4	
+2	32	64	2	
+0	8	2	8	
+0	4	0	4	
+AverageNum:2.4615384615384617
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go down
+0	2	0	4	
+0	32	4	2	
+8	8	64	8	
+2	4	2	4	
+AverageNum:2.4615384615384617
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	2	2	4	
+8	32	4	2	
+2	8	64	8	
+0	4	2	4	
+If go left
+4	4	0	0	
+8	32	4	2	
+2	8	64	8	
+4	2	4	0	
+AverageNum:2.5384615384615383
+GeometricSequence:5.0
+MaxNumDis:0.0SameNumberDistance:31.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go right
+0	0	4	4	
+8	32	4	2	
+2	8	64	8	
+0	4	2	4	
+AverageNum:2.5384615384615383
+GeometricSequence:6.0
+MaxNumDis:0.0SameNumberDistance:30.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go up
+8	2	2	4	
+2	32	4	2	
+0	8	64	8	
+0	4	2	4	
+AverageNum:2.357142857142857
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go down
+0	2	2	4	
+0	32	4	2	
+8	8	64	8	
+2	4	2	4	
+AverageNum:2.357142857142857
+GeometricSequence:9.0
+MaxNumDis:0.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+==================New Move====================
+Current board
+0	2	2	4	
+2	32	4	2	
+8	8	64	8	
+2	4	2	4	
+If go left
+4	4	0	0	
+2	32	4	2	
+16	64	8	0	
+2	4	2	4	
+AverageNum:2.4615384615384617
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:27.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go right
+0	0	4	4	
+2	32	4	2	
+0	16	64	8	
+2	4	2	4	
+AverageNum:2.4615384615384617
+GeometricSequence:7.0
+MaxNumDis:0.0SameNumberDistance:27.0
+SmallNumSum:2.0
+SpaceNumber:3.0
+SquareArea:0.0
+If go up
+2	2	2	4	
+8	32	4	2	
+2	8	64	8	
+0	4	2	4	
+AverageNum:2.2666666666666666
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:39.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go down
+0	2	2	4	
+2	32	4	2	
+8	8	64	8	
+2	4	2	4	
+==================New Move====================
+Current board
+2	2	2	4	
+8	32	4	2	
+2	8	64	8	
+2	4	2	4	
+If go left
+4	2	4	0	
+8	32	4	2	
+2	8	64	8	
+2	4	2	4	
+AverageNum:2.3333333333333335
+GeometricSequence:9.0
+MaxNumDis:0.0SameNumberDistance:39.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	2	4	4	
+8	32	4	2	
+2	8	64	8	
+2	4	2	4	
+AverageNum:2.3333333333333335
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:39.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+2	2	2	4	
+8	32	4	2	
+4	8	64	8	
+0	4	2	4	
+AverageNum:2.3333333333333335
+GeometricSequence:9.0
+MaxNumDis:0.0SameNumberDistance:40.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go down
+0	2	2	4	
+2	32	4	2	
+8	8	64	8	
+4	4	2	4	
+AverageNum:2.3333333333333335
+GeometricSequence:9.0
+MaxNumDis:0.0SameNumberDistance:40.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	2	2	4	
+8	32	4	2	
+4	8	64	8	
+2	4	2	4	
+If go left
+4	2	4	0	
+8	32	4	2	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.4
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:38.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	2	4	4	
+8	32	4	2	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.4
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:38.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+2	2	2	4	
+8	32	4	2	
+4	8	64	8	
+2	4	2	4	
+If go down
+2	2	2	4	
+8	32	4	2	
+4	8	64	8	
+2	4	2	4	
+==================New Move====================
+Current board
+4	2	4	2	
+8	32	4	2	
+4	8	64	8	
+2	4	2	4	
+If go left
+4	2	4	2	
+8	32	4	2	
+4	8	64	8	
+2	4	2	4	
+If go right
+4	2	4	2	
+8	32	4	2	
+4	8	64	8	
+2	4	2	4	
+If go up
+4	2	8	4	
+8	32	64	8	
+4	8	2	4	
+2	4	0	0	
+AverageNum:2.5714285714285716
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go down
+4	2	0	0	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.5714285714285716
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+==================New Move====================
+Current board
+4	2	0	2	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+If go left
+4	4	0	0	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.642857142857143
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+0	0	4	4	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.642857142857143
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:38.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+4	2	8	2	
+8	32	64	4	
+4	8	2	8	
+2	4	0	4	
+AverageNum:2.466666666666667
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:37.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go down
+4	2	0	2	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+==================New Move====================
+Current board
+0	2	4	4	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+If go left
+2	8	0	0	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.642857142857143
+GeometricSequence:10.0
+MaxNumDis:0.0SameNumberDistance:35.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+0	0	2	8	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.642857142857143
+GeometricSequence:11.0
+MaxNumDis:0.0SameNumberDistance:35.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+8	2	4	8	
+4	32	8	8	
+2	8	64	4	
+0	4	2	0	
+AverageNum:2.642857142857143
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:31.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go down
+0	2	4	0	
+8	32	8	8	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.642857142857143
+GeometricSequence:10.0
+MaxNumDis:0.0SameNumberDistance:34.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	0	2	8	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+If go left
+4	8	0	0	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.7142857142857144
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go right
+0	0	4	8	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.7142857142857144
+GeometricSequence:13.0
+MaxNumDis:0.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:2.0
+SquareArea:0.0
+If go up
+2	32	2	8	
+8	8	8	4	
+4	4	64	8	
+2	0	2	4	
+AverageNum:2.533333333333333
+GeometricSequence:8.0
+MaxNumDis:0.0SameNumberDistance:41.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go down
+2	0	2	8	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+==================New Move====================
+Current board
+0	2	4	8	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+If go left
+2	4	8	0	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.6
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:39.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	2	4	8	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+If go up
+8	2	4	8	
+4	32	8	4	
+2	8	64	8	
+0	4	2	4	
+AverageNum:2.6
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go down
+0	2	4	8	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+==================New Move====================
+Current board
+2	4	8	2	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+If go left
+2	4	8	2	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+If go right
+2	4	8	2	
+8	32	8	4	
+4	8	64	8	
+2	4	2	4	
+If go up
+2	4	16	2	
+8	32	64	4	
+4	8	2	8	
+2	4	0	4	
+AverageNum:2.533333333333333
+GeometricSequence:10.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go down
+2	4	0	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.533333333333333
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+==================New Move====================
+Current board
+2	4	4	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+If go left
+2	8	2	0	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.6
+GeometricSequence:10.0
+MaxNumDis:0.0SameNumberDistance:35.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	2	8	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.6
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:33.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+2	4	4	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+If go down
+2	4	4	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+==================New Move====================
+Current board
+2	2	8	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+If go left
+4	8	2	0	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.6666666666666665
+GeometricSequence:12.0
+MaxNumDis:0.0SameNumberDistance:35.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	4	8	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.6666666666666665
+GeometricSequence:13.0
+MaxNumDis:0.0SameNumberDistance:32.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+2	2	8	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+If go down
+2	2	8	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+==================New Move====================
+Current board
+4	8	2	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+If go left
+4	8	4	0	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.7333333333333334
+GeometricSequence:13.0
+MaxNumDis:0.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go right
+0	4	8	4	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+AverageNum:2.7333333333333334
+GeometricSequence:13.0
+MaxNumDis:0.0SameNumberDistance:36.0
+SmallNumSum:2.0
+SpaceNumber:1.0
+SquareArea:0.0
+If go up
+4	8	2	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+If go down
+4	8	2	2	
+8	32	16	4	
+4	8	64	8	
+2	4	2	4	
+==================New M

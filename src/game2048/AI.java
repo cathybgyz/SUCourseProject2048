@@ -2,6 +2,8 @@ package game2048;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 
 import javax.swing.JFrame;
@@ -19,8 +21,13 @@ public class AI {
 	public static Game2048 game2048; // get your game data here!
 
 	public static final boolean DEBUG = true;
+	
+	public static final boolean DEBUG_DETAILS = true;
+	
+	public static FileWriter fw; 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+		fw = new FileWriter("test.txt");
 		JFrame game = new JFrame();
 		game.setTitle("2048 Game");
 		game.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -36,6 +43,7 @@ public class AI {
 		game.setVisible(true);
 
 		RunAi(game2048);
+		fw.close();
 	}
 
 	public static final int MaxTimeSec = 60;
@@ -50,8 +58,10 @@ public class AI {
 		try {
 			while (true) {
 
-				if (DEBUG)
+				if (DEBUG) {
 					System.out.println("==================New Move====================");
+					fw.append("==================New Move====================\n");
+				}
 				// Try move and get score
 				// then make your move with this method call!
 				MakeMove(greedy(game));
@@ -59,10 +69,10 @@ public class AI {
 				// check time, since we are using Robot we need to kill it if we fail.
 				// another way to do this is create a "watchdog" thread that needs to be
 				// checked every x time.
-				// Thread.sleep(1000);
-				// secondsPassed++;
-				// if (secondsPassed >= MaxTimeSec)
-				// System.exit(0);
+				Thread.sleep(100);
+//				secondsPassed++;
+//				if (secondsPassed >= MaxTimeSec)
+//					System.exit(0);
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -70,7 +80,7 @@ public class AI {
 		}
 	}
 
-	public static Move greedy(Game2048 game) {
+	public static Move greedy(Game2048 game) throws Exception {
 		// Get 4 direction move
 		Tile[] nextBoard = new Tile[16];
 		double leftScore = 0;
@@ -79,15 +89,17 @@ public class AI {
 		double downScore = 0;
 		double maxScore = 0;
 
-		if(DEBUG) {
+		if (DEBUG) {
 			System.out.println("Current board");
+			fw.append("Current board\n");
 			printTiles(game.getBoard());
 		}
-		
+
 		nextBoard = predictLeft(game.getBoard());
-		
-		if(DEBUG) {
+
+		if (DEBUG_DETAILS) {
 			System.out.println("If go left");
+			fw.append("If go left\n");
 			printTiles(nextBoard);
 		}
 		if (checkNoChange(nextBoard, game.getBoard())) {
@@ -98,12 +110,13 @@ public class AI {
 		}
 
 		nextBoard = predictRight(game.getBoard());
-		
-		if(DEBUG) {
+
+		if (DEBUG_DETAILS) {
 			System.out.println("If go right");
+			fw.append("If go right\n");
 			printTiles(nextBoard);
 		}
-		
+
 		if (checkNoChange(nextBoard, game.getBoard())) {
 			rightScore = getScore(nextBoard);
 			if (maxScore < rightScore)
@@ -111,12 +124,13 @@ public class AI {
 		}
 
 		nextBoard = predictUp(game.getBoard());
-		
-		if(DEBUG) {
+
+		if (DEBUG_DETAILS) {
 			System.out.println("If go up");
+			fw.append("If go up\n");
 			printTiles(nextBoard);
 		}
-		
+
 		if (checkNoChange(nextBoard, game.getBoard())) {
 			upScore = getScore(nextBoard);
 			if (maxScore < upScore)
@@ -124,12 +138,13 @@ public class AI {
 		}
 
 		nextBoard = predictDown(game.getBoard());
-		
-		if(DEBUG) {
+
+		if (DEBUG_DETAILS) {
 			System.out.println("If go down");
+			fw.append("If go down\n");
 			printTiles(nextBoard);
 		}
-		
+
 		if (checkNoChange(nextBoard, game.getBoard())) {
 			downScore = getScore(nextBoard);
 			if (maxScore < downScore)
@@ -146,6 +161,11 @@ public class AI {
 		if (maxScore == downScore)
 			return Move.Down;
 
+		
+		if (DEBUG) {
+			System.out.println("Get next move error");
+		}
+		
 		return null;
 	}
 
@@ -189,7 +209,7 @@ public class AI {
 				return true;
 			else if (newB[i] == null)
 				return true;
-			else if (oldB[i].getValue() != newB[i].getValue())
+			else if (oldB[i].getValue().intValue() != newB[i].getValue().intValue())
 				return true;
 		}
 		return false;
@@ -241,7 +261,7 @@ public class AI {
 		LinkedList<Tile> list = new LinkedList<Tile>();
 		for (int i = 0; i < 4 && !oldLine[i].isEmpty(); i++) {
 			int num = oldLine[i].getValue();
-			if (i < 3 && oldLine[i].getValue() == oldLine[i + 1].getValue()) {
+			if (i < 3 && oldLine[i].getValue().intValue() == oldLine[i + 1].getValue().intValue()) {
 				num *= 2;
 				i++;
 			}
@@ -298,32 +318,76 @@ public class AI {
 			for (int y = 0; y < 4; y++) {
 				int newX = (x * cos) - (y * sin) + offsetX;
 				int newY = (x * sin) + (y * cos) + offsetY;
-				newTiles[(newX) + (newY) * 4] = target[x + y*4];
+				newTiles[(newX) + (newY) * 4] = target[x + y * 4];
 			}
 		}
 		return newTiles;
 	}
 
-	private static double getScore(Tile[] tiles) {
+	private static double getScore(Tile[] tiles) throws Exception {
 		double score = 0;
-
-		score += 1.71 * (new AverageNum()).function(tiles);
-		score += 3.75 * (new GeometricSequence()).function(tiles);
-		score += 15 * (new MaxNumDis()).function(tiles);
-		score += 2.5 * (new SameNumberDistance()).function(tiles);
-		score += 2 * (new SmallNumSum()).function(tiles);
-		score += 3.33 * (new SpaceNumber()).function(tiles);
-		score += 0.5 * (new SquareArea()).function(tiles);
+		double tmp = 0;
+		
+		if(DEBUG) {
+			tmp = (new AverageNum()).function(tiles);
+			System.out.println("AverageNum:" + tmp);
+			fw.append("AverageNum:" + tmp + "\n");
+		}
+		score += 1.71 * tmp;
+		
+		if(DEBUG) {
+			tmp = (new GeometricSequence()).function(tiles);
+			System.out.println("GeometricSequence:" + tmp);
+			fw.append("GeometricSequence:" + tmp + "\n");
+		}
+		score += 3.75 * tmp;
+		
+		if(DEBUG) {
+			tmp = (new MaxNumDis()).function(tiles);
+			System.out.println("MaxNumDis:" + tmp + "\n");
+			fw.append("MaxNumDis:" + tmp);
+		}
+		score += 15 * tmp;
+		
+		if(DEBUG) {
+			tmp = (new SameNumberDistance()).function(tiles);
+			System.out.println("SameNumberDistance:" + tmp);
+			fw.append("SameNumberDistance:" + tmp + "\n");
+		}
+		score += 2.5 * tmp;
+		
+		if(DEBUG) {
+			tmp = (new SmallNumSum()).function(tiles);
+			System.out.println("SmallNumSum:" + tmp);
+			fw.append("SmallNumSum:" + tmp + "\n");
+		}
+		score += 2 * tmp;
+		
+		if(DEBUG) {
+			tmp = (new SpaceNumber()).function(tiles);
+			System.out.println("SpaceNumber:" + tmp);
+			fw.append("SpaceNumber:" + tmp + "\n");
+		}
+		score += 3.33 * tmp;
+		
+		if(DEBUG) {
+			tmp = (new SquareArea()).function(tiles);
+			System.out.println("SquareArea:" + tmp);
+			fw.append("SquareArea:" + tmp + "\n");
+		}
+		score += 0.5 * tmp;
 
 		return score;
 	}
 
-	private static void printTiles(Tile[] t) {
+	private static void printTiles(Tile[] t) throws Exception {
 		for (int x = 0; x < 4; x++) {
 			for (int y = 0; y < 4; y++) {
-				System.out.print(t[x*4+y].getValue() + "\t");
+				System.out.print(t[x * 4 + y].getValue() + "\t");
+				fw.append(t[x * 4 + y].getValue() + "\t");
 			}
 			System.out.println();
+			fw.append("\n");
 		}
 	}
 }

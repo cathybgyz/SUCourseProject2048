@@ -169,8 +169,8 @@ public class Game2048 extends JPanel {
     for (int x = 0; x < 4; x++) {
       for (int y = 0; y < 4; y++) {
         Tile t = tileAt(x, y);
-        if ((x < 3 && t.getValue() == tileAt(x + 1, y).getValue())
-          || ((y < 3) && t.getValue() == tileAt(x, y + 1).getValue())) {
+        if ((x < 3 && t.getValue().intValue() == tileAt(x + 1, y).getValue().intValue())
+          || ((y < 3) && t.getValue().intValue() == tileAt(x, y + 1).getValue().intValue())) {
           return true;
         }
       }
@@ -186,7 +186,7 @@ public class Game2048 extends JPanel {
     }
 
     for (int i = 0; i < line1.length; i++) {
-      if (line1[i].getValue() != line2[i].getValue()) {
+      if (line1[i].getValue().intValue() != line2[i].getValue().intValue()) {
         return false;
       }
     }
@@ -237,13 +237,13 @@ public class Game2048 extends JPanel {
     LinkedList<Tile> list = new LinkedList<Tile>();
     for (int i = 0; i < 4 && !oldLine[i].isEmpty(); i++) {
       int num = oldLine[i].getValue();
-      if (i < 3 && oldLine[i].getValue() == oldLine[i + 1].getValue()) {
+      if (i < 3 && oldLine[i].getValue().intValue() == oldLine[i + 1].getValue().intValue()) {
         num *= 2;
         myScore += num;
-        int ourTarget = 2048;
-        if (num == ourTarget) {
-          myWin = true;
-        }
+//        int ourTarget = 2048;
+//        if (num == ourTarget) {
+//          myWin = true;
+//        }
         i++;
       }
       list.add(new Tile(num));
@@ -345,19 +345,19 @@ public class Game2048 extends JPanel {
 }
 
 
-//  public static void main(String[] args) {
-//    JFrame game = new JFrame();
-//    game.setTitle("2048 Game");
-//    game.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-//    game.setSize(340, 400);
-//    game.setResizable(false);
-//
-//    Game2048 game2048 = new Game2048();
-//    // setting classic game
-//    game2048.SetKeyAdapter(game2048.Game2048ClassicKeyAdapter());
-//    game.add(game2048);
-//
-//    game.setLocationRelativeTo(null);
-//    game.setVisible(true);
-//  }
+  public static void main(String[] args) {
+    JFrame game = new JFrame();
+    game.setTitle("2048 Game");
+    game.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    game.setSize(340, 400);
+    game.setResizable(false);
+
+    Game2048 game2048 = new Game2048();
+    // setting classic game
+    game2048.SetKeyAdapter(game2048.Game2048ClassicKeyAdapter());
+    game.add(game2048);
+
+    game.setLocationRelativeTo(null);
+    game.setVisible(true);
+  }
 }

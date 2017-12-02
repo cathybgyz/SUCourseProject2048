@@ -13,6 +13,12 @@ public class Tile {
 		this.value = 0;
     }
 
+    public Tile(Tile t) {
+    	this.row = t.getRow();
+    	this.col = t.getCol();
+    	this.value = t.getValue();
+    }
+    
     public Tile(Integer num) {
       value = num;
     }
