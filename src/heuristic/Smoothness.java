@@ -17,15 +17,22 @@ public class Smoothness implements Heuristic {
 			//right
 			if(value[x][y] != 0) {
 				if(x+1<4) {
-					if(value[x][y] == value[x+1][y]) total+=2;
+					if(value[x][y] == value[x+1][y]) {
+						if(y==0 || y == 3) total +=2;
+						total+=2;
+					}
 					else if(value[x+1][y] == 0) {
 						if(x+2<4 && value[x+2][y] != 0) {
 							int log1 = LogNumber.LogReturn(value[x][y]);
 							int log2 = LogNumber.LogReturn(value[x+2][y]);
 							int logDiff = Math.abs(log1-log2);
-							if(logDiff == 0) total +=2;
+							if(logDiff == 0) {
+								if(y==0 || y == 3) total +=2;
+								total +=2;
+							}
 							else {
 								double score = 1.0/logDiff;
+								if(y==0 || y == 3) score = score * 2;
 								total+=score;
 							}
 						}
@@ -33,9 +40,13 @@ public class Smoothness implements Heuristic {
 							int log1 = LogNumber.LogReturn(value[x][y]);
 							int log2 = LogNumber.LogReturn(value[x+3][y]);
 							int logDiff = Math.abs(log1-log2);
-							if(logDiff == 0) total +=2;
+							if(logDiff == 0) {
+								if(y==0 || y == 3) total +=2;
+								total +=2;
+							}
 							else {
 								double score = 1.0/logDiff;
+								if(y==0 || y == 3) score = score * 2;
 								total+=score;
 							}
 						}
@@ -44,9 +55,13 @@ public class Smoothness implements Heuristic {
 						int log1 = LogNumber.LogReturn(value[x][y]);
 						int log2 = LogNumber.LogReturn(value[x+1][y]);
 						int logDiff = Math.abs(log1-log2);
-						if(logDiff == 0) total +=2;
+						if(logDiff == 0) {
+							if(y==0 || y == 3) total +=2;
+							total +=2;
+						}
 						else {
 							double score = 1.0/logDiff;
+							if(y==0 || y == 3) score = score * 2;
 							total+=score;
 						}
 					}
@@ -54,15 +69,22 @@ public class Smoothness implements Heuristic {
 			
 			//down
 				if(y+1<4) {
-					if(value[x][y] == value[x][y+1]) total+=2;
+					if(value[x][y] == value[x][y+1]) {
+						if(x==0 || x == 3) total +=2;
+						total+=2;
+					}
 					else if(value[x][y+1] == 0) {
 						if(y+2<4 && value[x][y+2] != 0) {
 							int log1 = LogNumber.LogReturn(value[x][y]);
 							int log2 = LogNumber.LogReturn(value[x][y+2]);
 							int logDiff = Math.abs(log1-log2);
-							if(logDiff == 0) total +=2;
+							if(logDiff == 0) {
+								if(x==0 || x == 3) total +=2;
+								total +=2;
+							}
 							else {
 								double score = 1.0/logDiff;
+								if(x==0 || x == 3) score = score * 2;
 								total+=score;
 							}
 						}
@@ -70,9 +92,13 @@ public class Smoothness implements Heuristic {
 							int log1 = LogNumber.LogReturn(value[x][y]);
 							int log2 = LogNumber.LogReturn(value[x][y+3]);
 							int logDiff = Math.abs(log1-log2);
-							if(logDiff == 0) total +=2;
+							if(logDiff == 0) {
+								if(x==0 || x == 3) total +=2;
+								total +=2;
+							}
 							else {
 								double score = 1.0/logDiff;
+								if(x==0 || x == 3) score = score * 2;
 								total+=score;
 							}
 						}
@@ -81,9 +107,13 @@ public class Smoothness implements Heuristic {
 						int log1 = LogNumber.LogReturn(value[x][y]);
 						int log2 = LogNumber.LogReturn(value[x][y+1]);
 						int logDiff = Math.abs(log1-log2);
-						if(logDiff == 0) total +=2;
+						if(logDiff == 0) {
+							if(x==0 || x == 3) total +=2;
+							total +=2;
+						}
 						else {
 							double score = 1.0/logDiff;
+							if(x==0 || x == 3) score = score * 2;
 							total+=score;
 						}
 					}
