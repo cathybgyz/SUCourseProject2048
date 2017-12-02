@@ -21,10 +21,10 @@ public class AI {
 	public static Game2048 game2048; // get your game data here!
 
 	public static final boolean DEBUG = true;
-	
+
 	public static final boolean DEBUG_DETAILS = true;
-	
-	public static FileWriter fw; 
+
+	public static FileWriter fw;
 
 	public static void main(String[] args) throws Exception {
 		fw = new FileWriter("test.txt");
@@ -69,10 +69,10 @@ public class AI {
 				// check time, since we are using Robot we need to kill it if we fail.
 				// another way to do this is create a "watchdog" thread that needs to be
 				// checked every x time.
-				Thread.sleep(100);
-//				secondsPassed++;
-//				if (secondsPassed >= MaxTimeSec)
-//					System.exit(0);
+				Thread.sleep(200);
+				// secondsPassed++;
+				// if (secondsPassed >= MaxTimeSec)
+				// System.exit(0);
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -161,11 +161,10 @@ public class AI {
 		if (maxScore == downScore)
 			return Move.Down;
 
-		
 		if (DEBUG) {
 			System.out.println("Get next move error");
 		}
-		
+
 		return null;
 	}
 
@@ -327,56 +326,80 @@ public class AI {
 	private static double getScore(Tile[] tiles) throws Exception {
 		double score = 0;
 		double tmp = 0;
-		
-		if(DEBUG) {
-			tmp = (new AverageNum()).function(tiles);
-			System.out.println("AverageNum:" + tmp);
-			fw.append("AverageNum:" + tmp + "\n");
-		}
-		score += 1.71 * tmp;
-		
-		if(DEBUG) {
+		double tmp2 = 0;
+		double Weight_AverageNum = 1.71;
+		double Weight_GeometricSequence = 3.75;
+		double Weight_MaxNumDis = 30;
+		double Weight_SameNumberDistance = 2.5;
+		double Weight_SmallNumSum = 5;
+		double Weight_SpaceNumber = 12;
+		double Weight_SquareArea = 4;
+
+		// if(DEBUG) {
+		// tmp = (new AverageNum()).function(tiles);
+		// System.out.println("AverageNum:" + tmp);
+		// fw.append("AverageNum:" + tmp + "\n");
+		// }
+		// score += 1.71 * tmp;
+
+		if (DEBUG) {
 			tmp = (new GeometricSequence()).function(tiles);
 			System.out.println("GeometricSequence:" + tmp);
-			fw.append("GeometricSequence:" + tmp + "\n");
+			tmp2 = Weight_AverageNum * tmp;
+			fw.append("GeometricSequence:" + Weight_GeometricSequence + "*" + tmp + ": " + tmp2 + "\n");
+
 		}
-		score += 3.75 * tmp;
-		
-		if(DEBUG) {
+
+		score += tmp2;
+
+		if (DEBUG) {
 			tmp = (new MaxNumDis()).function(tiles);
-			System.out.println("MaxNumDis:" + tmp + "\n");
-			fw.append("MaxNumDis:" + tmp);
+			System.out.println("MaxNumDis:" + tmp);
+			tmp2 = Weight_MaxNumDis * tmp;
+			fw.append("MaxNumDis:" + Weight_MaxNumDis + "*" + tmp + ": " + tmp2 + "\n");
+
 		}
-		score += 15 * tmp;
-		
-		if(DEBUG) {
+		score += tmp2;
+
+		if (DEBUG) {
 			tmp = (new SameNumberDistance()).function(tiles);
 			System.out.println("SameNumberDistance:" + tmp);
-			fw.append("SameNumberDistance:" + tmp + "\n");
+			tmp2 = Weight_SameNumberDistance * tmp;
+			fw.append("SameNumberDistance:" + Weight_SameNumberDistance + "*" + tmp + ": " + tmp2 + "\n");
+
 		}
-		score += 2.5 * tmp;
-		
-		if(DEBUG) {
+		score += tmp2;
+
+		if (DEBUG) {
 			tmp = (new SmallNumSum()).function(tiles);
 			System.out.println("SmallNumSum:" + tmp);
-			fw.append("SmallNumSum:" + tmp + "\n");
+			tmp2 = Weight_SmallNumSum * tmp;
+			fw.append("SmallNumSum:" + Weight_SmallNumSum + "*" + tmp + ": " + tmp2 + "\n");
+
 		}
-		score += 2 * tmp;
-		
-		if(DEBUG) {
+		score += tmp2;
+
+		if (DEBUG) {
 			tmp = (new SpaceNumber()).function(tiles);
 			System.out.println("SpaceNumber:" + tmp);
-			fw.append("SpaceNumber:" + tmp + "\n");
+			tmp2 = Weight_SpaceNumber * tmp;
+			fw.append("SpaceNumber:" + Weight_SpaceNumber + "*" + tmp + ": " + tmp2 + "\n");
+
 		}
-		score += 3.33 * tmp;
-		
-		if(DEBUG) {
+		score += tmp2;
+
+		if (DEBUG) {
 			tmp = (new SquareArea()).function(tiles);
 			System.out.println("SquareArea:" + tmp);
-			fw.append("SquareArea:" + tmp + "\n");
-		}
-		score += 0.5 * tmp;
+			tmp2 = Weight_SquareArea * tmp;
+			fw.append("SquareArea:" + Weight_SquareArea + "*" + tmp + ": " + tmp2 + "\n");
 
+		}
+		score += tmp2;
+
+		if (DEBUG) {
+			fw.append("Score:" + score + "\n");
+		}
 		return score;
 	}
 
