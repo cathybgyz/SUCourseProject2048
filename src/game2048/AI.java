@@ -3,17 +3,16 @@ package game2048;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.LinkedList;
 
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-import heuristic.AverageNum;
 import heuristic.GeometricSequence;
 import heuristic.MaxNumDis;
 import heuristic.SameNumberDistance;
 import heuristic.SmallNumSum;
+import heuristic.Smoothness;
 import heuristic.SpaceNumber;
 import heuristic.SquareArea;
 
@@ -69,7 +68,7 @@ public class AI {
 				// check time, since we are using Robot we need to kill it if we fail.
 				// another way to do this is create a "watchdog" thread that needs to be
 				// checked every x time.
-				Thread.sleep(200);
+				Thread.sleep(50);
 				// secondsPassed++;
 				// if (secondsPassed >= MaxTimeSec)
 				// System.exit(0);
@@ -335,12 +334,12 @@ public class AI {
 		double Weight_SpaceNumber = 12;
 		double Weight_SquareArea = 4;
 
-		// if(DEBUG) {
-		// tmp = (new AverageNum()).function(tiles);
-		// System.out.println("AverageNum:" + tmp);
-		// fw.append("AverageNum:" + tmp + "\n");
-		// }
-		// score += 1.71 * tmp;
+//		if (DEBUG) {
+//			tmp = (new Smoothness()).function(tiles);
+//			System.out.println("AverageNum:" + tmp);
+//			fw.append("AverageNum:" + tmp + "\n");
+//		}
+//		score += 1.71 * tmp;
 
 		if (DEBUG) {
 			tmp = (new GeometricSequence()).function(tiles);
