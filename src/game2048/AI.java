@@ -326,25 +326,26 @@ public class AI {
 		double score = 0;
 		double tmp = 0;
 		double tmp2 = 0;
-		double Weight_AverageNum = 1.71;
-		double Weight_GeometricSequence = 3.75;
+		double Weight_AverageNum = 0.7;
+		double Weight_GeometricSequence = 1.75;
 		double Weight_MaxNumDis = 30;
 		double Weight_SameNumberDistance = 2.5;
-		double Weight_SmallNumSum = 5;
-		double Weight_SpaceNumber = 12;
+		double Weight_SmallNumSum = 8;
+		double Weight_SpaceNumber = 30;
 		double Weight_SquareArea = 4;
 
-//		if (DEBUG) {
-//			tmp = (new Smoothness()).function(tiles);
-//			System.out.println("AverageNum:" + tmp);
-//			fw.append("AverageNum:" + tmp + "\n");
-//		}
-//		score += 1.71 * tmp;
+		if (DEBUG) {
+			tmp = (new Smoothness()).function(tiles);
+			System.out.println("AverageNum:" + tmp);
+			tmp2 = Weight_AverageNum * tmp;
+			fw.append("AverageNum:" + Weight_AverageNum + "*" + tmp + ": " + tmp2 + "\n");
+		}
+		score += tmp2;
 
 		if (DEBUG) {
 			tmp = (new GeometricSequence()).function(tiles);
 			System.out.println("GeometricSequence:" + tmp);
-			tmp2 = Weight_AverageNum * tmp;
+			tmp2 = Weight_GeometricSequence * tmp;
 			fw.append("GeometricSequence:" + Weight_GeometricSequence + "*" + tmp + ": " + tmp2 + "\n");
 
 		}
