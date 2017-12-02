@@ -13,34 +13,47 @@ public class GeometricSequence implements Heuristic {
 		// reshape 1d tile array to 2d value array
 		int array2d[][] = new int[4][4];
 		int k = 0;
+		int max = 0;
 		for(int i = 0; i < 4; i++) {
 			for(int j = 0; j < 4; j++) {
 			   array2d[i][j] = tile[k].getValue();
+			   if(max < array2d[i][j])
+				   max = array2d[i][j];
 			   k++;
 		   }
 		}
-   
+
 		// calculate score
 		int score = 0;
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
 				// check right
-				if (i < 3) {
-					if (array2d[i][j]==0) continue;
-					if (array2d[i+1][j]==0) continue;
-					if (array2d[i][j] == array2d[i+1][j]*2)
-						score++;
-					else if (array2d[i][j] == array2d[i+1][j]/2)
-						score++;
-				}
-				// check bottom
 				if  (j < 3) {
 					if (array2d[i][j]==0) continue;
 					if (array2d[i][j+1]==0) continue;
 					if (array2d[i][j] == array2d[i][j+1]*2)
-						score++;
+						if (array2d[i][j]==max)
+							score= score +5;
+						else score++;
 					else if (array2d[i][j] == array2d[i][j+1]/2)
-						score++;
+						if (array2d[i][j+1]==max)
+							score= score +5;
+						else score++;
+						
+				}
+				// check bottom
+				if (i < 3) {
+					if (array2d[i][j]==0) continue;
+					if (array2d[i+1][j]==0) continue;
+					if (array2d[i][j] == array2d[i+1][j]*2)
+						if (array2d[i][j]==max)
+							score= score +5;
+						else score++;
+					else if (array2d[i][j] == array2d[i+1][j]/2)
+						if (array2d[i+1][j]==max)
+							score= score +5;
+						else score++;
+						
 				}
 			}
 		}
