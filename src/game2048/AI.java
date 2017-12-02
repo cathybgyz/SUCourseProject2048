@@ -7,8 +7,18 @@ import java.util.LinkedList;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
+import heuristic.AverageNum;
+import heuristic.GeometricSequence;
+import heuristic.MaxNumDis;
+import heuristic.SameNumberDistance;
+import heuristic.SmallNumSum;
+import heuristic.SpaceNumber;
+import heuristic.SquareArea;
+
 public class AI {
 	public static Game2048 game2048; // get your game data here!
+
+	public static final boolean DEBUG = true;
 
 	public static void main(String[] args) {
 		JFrame game = new JFrame();
@@ -40,6 +50,8 @@ public class AI {
 		try {
 			while (true) {
 
+				if (DEBUG)
+					System.out.println("==================New Move====================");
 				// Try move and get score
 				// then make your move with this method call!
 				MakeMove(greedy(game));
@@ -47,10 +59,10 @@ public class AI {
 				// check time, since we are using Robot we need to kill it if we fail.
 				// another way to do this is create a "watchdog" thread that needs to be
 				// checked every x time.
-				Thread.sleep(1000);
-				secondsPassed++;
-				if (secondsPassed >= MaxTimeSec)
-					System.exit(0);
+				// Thread.sleep(1000);
+				// secondsPassed++;
+				// if (secondsPassed >= MaxTimeSec)
+				// System.exit(0);
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -61,13 +73,23 @@ public class AI {
 	public static Move greedy(Game2048 game) {
 		// Get 4 direction move
 		Tile[] nextBoard = new Tile[16];
-		int leftScore = 0;
-		int rightScore = 0;
-		int upScore = 0;
-		int downScore = 0;
-		int maxScore = 0;
+		double leftScore = 0;
+		double rightScore = 0;
+		double upScore = 0;
+		double downScore = 0;
+		double maxScore = 0;
 
+		if(DEBUG) {
+			System.out.println("Current board");
+			printTiles(game.getBoard());
+		}
+		
 		nextBoard = predictLeft(game.getBoard());
+		
+		if(DEBUG) {
+			System.out.println("If go left");
+			printTiles(nextBoard);
+		}
 		if (checkNoChange(nextBoard, game.getBoard())) {
 			leftScore = getScore(nextBoard);
 			if (maxScore < leftScore) {
@@ -76,6 +98,12 @@ public class AI {
 		}
 
 		nextBoard = predictRight(game.getBoard());
+		
+		if(DEBUG) {
+			System.out.println("If go right");
+			printTiles(nextBoard);
+		}
+		
 		if (checkNoChange(nextBoard, game.getBoard())) {
 			rightScore = getScore(nextBoard);
 			if (maxScore < rightScore)
@@ -83,6 +111,12 @@ public class AI {
 		}
 
 		nextBoard = predictUp(game.getBoard());
+		
+		if(DEBUG) {
+			System.out.println("If go up");
+			printTiles(nextBoard);
+		}
+		
 		if (checkNoChange(nextBoard, game.getBoard())) {
 			upScore = getScore(nextBoard);
 			if (maxScore < upScore)
@@ -90,6 +124,12 @@ public class AI {
 		}
 
 		nextBoard = predictDown(game.getBoard());
+		
+		if(DEBUG) {
+			System.out.println("If go down");
+			printTiles(nextBoard);
+		}
+		
 		if (checkNoChange(nextBoard, game.getBoard())) {
 			downScore = getScore(nextBoard);
 			if (maxScore < downScore)
@@ -258,10 +298,32 @@ public class AI {
 			for (int y = 0; y < 4; y++) {
 				int newX = (x * cos) - (y * sin) + offsetX;
 				int newY = (x * sin) + (y * cos) + offsetY;
-				newTiles[(newX) + (newY) * 4] = target[4 * x + y];
+				newTiles[(newX) + (newY) * 4] = target[x + y*4];
 			}
 		}
 		return newTiles;
 	}
 
+	private static double getScore(Tile[] tiles) {
+		double score = 0;
+
+		score += 1.71 * (new AverageNum()).function(tiles);
+		score += 3.75 * (new GeometricSequence()).function(tiles);
+		score += 15 * (new MaxNumDis()).function(tiles);
+		score += 2.5 * (new SameNumberDistance()).function(tiles);
+		score += 2 * (new SmallNumSum()).function(tiles);
+		score += 3.33 * (new SpaceNumber()).function(tiles);
+		score += 0.5 * (new SquareArea()).function(tiles);
+
+		return score;
+	}
+
+	private static void printTiles(Tile[] t) {
+		for (int x = 0; x < 4; x++) {
+			for (int y = 0; y < 4; y++) {
+				System.out.print(t[x*4+y].getValue() + "\t");
+			}
+			System.out.println();
+		}
+	}
 }

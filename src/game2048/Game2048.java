@@ -339,21 +339,25 @@ public class Game2048 extends JPanel {
   public Tile[] getBoard() {
 	  return myTiles;
   }
+  
+  public void refreshBoard() {
+	  repaint();
+}
 
 
-  public static void main(String[] args) {
-    JFrame game = new JFrame();
-    game.setTitle("2048 Game");
-    game.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-    game.setSize(340, 400);
-    game.setResizable(false);
-
-    Game2048 game2048 = new Game2048();
-    // setting classic game
-    game2048.SetKeyAdapter(game2048.Game2048ClassicKeyAdapter());
-    game.add(game2048);
-
-    game.setLocationRelativeTo(null);
-    game.setVisible(true);
-  }
+//  public static void main(String[] args) {
+//    JFrame game = new JFrame();
+//    game.setTitle("2048 Game");
+//    game.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+//    game.setSize(340, 400);
+//    game.setResizable(false);
+//
+//    Game2048 game2048 = new Game2048();
+//    // setting classic game
+//    game2048.SetKeyAdapter(game2048.Game2048ClassicKeyAdapter());
+//    game.add(game2048);
+//
+//    game.setLocationRelativeTo(null);
+//    game.setVisible(true);
+//  }
 }
