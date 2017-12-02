@@ -1,6 +1,7 @@
 package heuristic;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -64,10 +65,10 @@ public class SameNumberDistance implements Heuristic {
 					if (distance > 0 && distance < min)
 						min = distance;
 				}
-				score += 6 - min;
+				score += (6 - min)*curValue/Math.log(curValue)*Math.log(2);
 			}
 		}
 
-		return score;
+		return score/3;
 	}
 }
