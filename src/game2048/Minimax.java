@@ -69,6 +69,13 @@ public class Minimax {
 		    		emptyTime.setValue(0);
 		    	}
 		    }
+		    else {
+		    	Tile[] temp = new Tile[16];
+				  for(int i=0;i<16;i++) {
+					  temp[i] = new Tile(state[i]);
+				  }
+		    		children.add(temp);
+		    }
 		    return children;
 		  }
 
