@@ -23,7 +23,7 @@ public class SameNumberDistance implements Heuristic {
 	 */
 	@Override
 	public double function(Tile board[]) {
-		int NONZERO = 0;
+		int NONZERO = 16;
 		if (board.length != 16)
 			return 0;
 
