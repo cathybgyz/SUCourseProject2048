@@ -328,7 +328,6 @@ public class AI {
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 30;
 		double Weight_SquareArea = 4;
-		double Weight_MoveDirection = 40;
 		if (DEBUG) {
 			tmp = (new Smoothness()).function(tiles);
 			System.out.println("Smoothness:" + tmp);
@@ -392,14 +391,8 @@ public class AI {
 		}
 		score += tmp2;
 
-		if (DEBUG) {
-			tmp = (new MoveDirection()).function(tiles);
-			System.out.println("MoveDirection:" + tmp);
-			tmp2 = Weight_MoveDirection * tmp;
-			fw.append("MoveDirection:" + Weight_MoveDirection + "*" + tmp + ": " + tmp2 + "\n");
-
-		}
-		score += tmp2;
+		
+		
 		if (DEBUG) {
 			fw.append("Score:" + score + "\n");
 		}
