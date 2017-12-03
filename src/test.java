@@ -8,7 +8,7 @@ public class test {
 
 	public static void main(String args[]) throws Exception {
 		Tile[] input = new Tile[16];
-		int testTime = 100000;
+		int testTime = 10000;
 		Integer[] element = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,4,4,4,4,4,4,8,8,8,16,16,16,32,32,32,64,64,128,128,256,512,1024,2048};
 		Random rand = new Random();
 		FileWriter fw = new FileWriter("score.csv");

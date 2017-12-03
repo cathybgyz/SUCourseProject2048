@@ -81,6 +81,7 @@ public class AI {
 		double upScore = 0;
 		double downScore = 0;
 		double maxScore = 0;
+		double offset = 0;
 
 		if (DEBUG) {
 			System.out.println("Current board");
@@ -96,7 +97,7 @@ public class AI {
 			printTiles(nextBoard);
 		}
 		if (checkNoChange(nextBoard, game.getBoard())) {
-			leftScore = getScore(nextBoard);
+			leftScore = getScore(nextBoard) + offset;
 			if (maxScore < leftScore) {
 				maxScore = leftScore;
 			}
@@ -139,7 +140,7 @@ public class AI {
 		}
 
 		if (checkNoChange(nextBoard, game.getBoard())) {
-			downScore = getScore(nextBoard);
+			downScore = getScore(nextBoard) + offset;
 			if (maxScore < downScore)
 				maxScore = downScore;
 		}
