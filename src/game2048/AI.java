@@ -8,13 +8,7 @@ import java.util.LinkedList;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-import heuristic.GeometricSequence;
-import heuristic.MaxNumDis;
-import heuristic.SameNumberDistance;
-import heuristic.SmallNumSum;
-import heuristic.Smoothness;
-import heuristic.SpaceNumber;
-import heuristic.SquareArea;
+import heuristic.*;
 
 public class AI {
 	public static Game2048 game2048; // get your game data here!
@@ -326,19 +320,19 @@ public class AI {
 		double score = 0;
 		double tmp = 0;
 		double tmp2 = 0;
-		double Weight_AverageNum = 0.7;
+		double Weight_Smoothness = 0.7;
 		double Weight_GeometricSequence = 1.75;
 		double Weight_MaxNumDis = 30;
 		double Weight_SameNumberDistance = 2.5;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 30;
 		double Weight_SquareArea = 4;
-
+		double Weight_MoveDirection = 40;
 		if (DEBUG) {
 			tmp = (new Smoothness()).function(tiles);
-			System.out.println("AverageNum:" + tmp);
-			tmp2 = Weight_AverageNum * tmp;
-			fw.append("AverageNum:" + Weight_AverageNum + "*" + tmp + ": " + tmp2 + "\n");
+			System.out.println("Smoothness:" + tmp);
+			tmp2 = Weight_Smoothness * tmp;
+			fw.append("Smoothness:" + Weight_Smoothness + "*" + tmp + ": " + tmp2 + "\n");
 		}
 		score += tmp2;
 
@@ -397,6 +391,14 @@ public class AI {
 		}
 		score += tmp2;
 
+		if (DEBUG) {
+			tmp = (new MoveDirection()).function(tiles);
+			System.out.println("MoveDirection:" + tmp);
+			tmp2 = Weight_MoveDirection * tmp;
+			fw.append("MoveDirection:" + Weight_MoveDirection + "*" + tmp + ": " + tmp2 + "\n");
+
+		}
+		score += tmp2;
 		if (DEBUG) {
 			fw.append("Score:" + score + "\n");
 		}
