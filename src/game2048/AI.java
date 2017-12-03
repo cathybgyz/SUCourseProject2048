@@ -321,6 +321,7 @@ public class AI {
 		double score = 0;
 		double tmp = 0;
 		double tmp2 = 0;
+		double Weight_Distance = 0.1;
 		double Weight_Smoothness = 0.7;
 		double Weight_GeometricSequence = 1.75;
 		double Weight_MaxNumDis = 30;
@@ -328,6 +329,17 @@ public class AI {
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 30;
 		double Weight_SquareArea = 4;
+		
+		// ----------
+		if (DEBUG) {
+			tmp = (new Distance()).function(tiles);
+			System.out.println("Distance:" + tmp);
+			tmp2 = Weight_Distance * tmp;
+			fw.append("Distance:" + Weight_Distance + "*" + tmp + ": " + tmp2 + "\n");
+		}
+		score += tmp2;
+		// ------------------
+		
 		if (DEBUG) {
 			tmp = (new Smoothness()).function(tiles);
 			System.out.println("Smoothness:" + tmp);
@@ -394,6 +406,7 @@ public class AI {
 		
 		
 		if (DEBUG) {
+			System.out.println("Score:" + score);
 			fw.append("Score:" + score + "\n");
 		}
 		return score;
