@@ -28,7 +28,7 @@ public class Distance implements Heuristic {
 			for (Tile t : tile) {
 				if (t.getValue().intValue() != cur.intValue())
 					continue;
-				int tmp = t.getCol() + t.getRow() - 3;
+				int tmp = t.getCol() + t.getRow();
 				if (tmp < distance)
 					distance = tmp;
 			}
