@@ -4,7 +4,10 @@ import game2048.Tile;
 
 /**
  * Heuristic function to get the Geometric Sequence around a tile. 
+ * V1.0
  * For each tile, if a tile which next to it (upper one and right one)is 2 or 0.5 times of this tile, score + 1
+ * V1.1
+ * For the largest number sequence, the score is 5
  * Author: Zimeng Lyu
  * **/
 public class GeometricSequence implements Heuristic {
@@ -33,7 +36,7 @@ public class GeometricSequence implements Heuristic {
 					if (array2d[i][j+1]==0) continue;
 					if (array2d[i][j] == array2d[i][j+1]*2)
 						if (array2d[i][j]==max)
-							score= score +5;
+							score= score +10;
 						else score++;
 					else if (array2d[i][j] == array2d[i][j+1]/2)
 						if (array2d[i][j+1]==max)

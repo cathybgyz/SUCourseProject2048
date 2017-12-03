@@ -9,13 +9,7 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-import heuristic.GeometricSequence;
-import heuristic.MaxNumDis;
-import heuristic.SameNumberDistance;
-import heuristic.SmallNumSum;
-import heuristic.Smoothness;
-import heuristic.SpaceNumber;
-import heuristic.SquareArea;
+import heuristic.*;
 
 public class AI {
 	public static Game2048 game2048; // get your game data here!
@@ -88,6 +82,7 @@ public class AI {
 		double upScore = 0;
 		double downScore = 0;
 		double maxScore = 0;
+		double offset = 0;
 
 		if (DEBUG) {
 			System.out.println("Current board");
@@ -103,7 +98,7 @@ public class AI {
 			printTiles(nextBoard);
 		}
 		if (checkNoChange(nextBoard, game.getBoard())) {
-			leftScore = getScore(nextBoard);
+			leftScore = getScore(nextBoard) + offset;
 			if (maxScore < leftScore) {
 				maxScore = leftScore;
 			}
@@ -146,7 +141,7 @@ public class AI {
 		}
 
 		if (checkNoChange(nextBoard, game.getBoard())) {
-			downScore = getScore(nextBoard);
+			downScore = getScore(nextBoard) + offset;
 			if (maxScore < downScore)
 				maxScore = downScore;
 		}
@@ -327,19 +322,30 @@ public class AI {
 		double score = 0;
 		double tmp = 0;
 		double tmp2 = 0;
-		double Weight_AverageNum = 0.7;
+		double Weight_Distance = 0.1;
+		double Weight_Smoothness = 0.7;
 		double Weight_GeometricSequence = 1.75;
 		double Weight_MaxNumDis = 30;
 		double Weight_SameNumberDistance = 2.5;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 30;
 		double Weight_SquareArea = 4;
-
+		
+		// ----------
+		if (DEBUG) {
+			tmp = (new Distance()).function(tiles);
+			System.out.println("Distance:" + tmp);
+			tmp2 = Weight_Distance * tmp;
+			fw.append("Distance:" + Weight_Distance + "*" + tmp + ": " + tmp2 + "\n");
+		}
+		score += tmp2;
+		// ------------------
+		
 		if (DEBUG) {
 			tmp = (new Smoothness()).function(tiles);
-			//System.out.println("AverageNum:" + tmp);
-			tmp2 = Weight_AverageNum * tmp;
-			fw.append("AverageNum:" + Weight_AverageNum + "*" + tmp + ": " + tmp2 + "\n");
+			System.out.println("Smoothness:" + tmp);
+			tmp2 = Weight_Smoothness * tmp;
+			fw.append("Smoothness:" + Weight_Smoothness + "*" + tmp + ": " + tmp2 + "\n");
 		}
 		score += tmp2;
 
@@ -398,7 +404,10 @@ public class AI {
 		}
 		score += tmp2;
 
+		
+		
 		if (DEBUG) {
+			System.out.println("Score:" + score);
 			fw.append("Score:" + score + "\n");
 		}
 		return score;

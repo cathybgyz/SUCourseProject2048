@@ -23,6 +23,7 @@ public class SameNumberDistance implements Heuristic {
 	 */
 	@Override
 	public double function(Tile board[]) {
+		int NONZERO = 0;
 		if (board.length != 16)
 			return 0;
 
@@ -54,21 +55,28 @@ public class SameNumberDistance implements Heuristic {
 
 			// Continue if the value is 0
 			if (curValue == 0)
+			{
+				NONZERO = 16-sameValueTiles.size();
 				continue;
-
+			}
+				
+			int i = 0;
 			// Check tile one by one to see the shortest distance of a specific value
-			while (sameValueTiles.size() > 1) {
-				Tile t = sameValueTiles.remove(0);
+			while (sameValueTiles.size() > 1 && sameValueTiles.size() > i) {
+				Tile t = sameValueTiles.get(i);
 				int min = 100;
 				for (Tile cur : sameValueTiles) {
+					if(cur.getCol() == t.getCol() && cur.getRow() == t.getRow())
+						continue;
 					int distance = Math.abs(cur.getCol() - t.getCol()) + Math.abs(cur.getRow() - t.getRow());
 					if (distance > 0 && distance < min)
 						min = distance;
 				}
-				score += (6 - min)*curValue/Math.log(curValue)*Math.log(2);
+				score += Math.log(curValue)/Math.log(2)*Math.pow(0.75, min)*sameValueTiles.size();
+				i++;
 			}
 		}
 
-		return score/3;
+		return score/NONZERO;
 	}
 }
