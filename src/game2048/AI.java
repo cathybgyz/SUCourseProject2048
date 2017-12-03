@@ -321,15 +321,26 @@ public class AI {
 		double score = 0;
 		double tmp = 0;
 		double tmp2 = 0;
+		double Weight_BePair = 50;
 		double Weight_Distance = 0.1;
 		double Weight_Smoothness = 0.7;
 		double Weight_GeometricSequence = 1.75;
 		double Weight_MaxNumDis = 30;
-		double Weight_SameNumberDistance = 2.5;
+		double Weight_SameNumberDistance = 60;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 30;
 		double Weight_SquareArea = 4;
-		
+
+		// ----------
+		if (DEBUG) {
+			tmp = (new BePair()).function(tiles);
+			System.out.println("BePair:" + tmp);
+			tmp2 = Weight_BePair * tmp;
+			fw.append("BePair:" + Weight_BePair + "*" + tmp + ": " + tmp2 + "\n");
+		}
+		score += tmp2;
+		// ------------------
+
 		// ----------
 		if (DEBUG) {
 			tmp = (new Distance()).function(tiles);
@@ -339,7 +350,7 @@ public class AI {
 		}
 		score += tmp2;
 		// ------------------
-		
+
 		if (DEBUG) {
 			tmp = (new Smoothness()).function(tiles);
 			System.out.println("Smoothness:" + tmp);
@@ -403,8 +414,6 @@ public class AI {
 		}
 		score += tmp2;
 
-		
-		
 		if (DEBUG) {
 			System.out.println("Score:" + score);
 			fw.append("Score:" + score + "\n");

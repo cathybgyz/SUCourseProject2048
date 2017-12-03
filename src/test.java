@@ -14,7 +14,7 @@ public class test {
 		FileWriter fw = new FileWriter("score.csv");
 		
 		// Change the function object below
-		Heuristic func = new Distance();
+		Heuristic func = new BePair();
 		double score = 0;
 
 		for (int cur = 0; cur < testTime; cur++) {
