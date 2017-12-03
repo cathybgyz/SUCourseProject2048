@@ -4,6 +4,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.FileWriter;
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
@@ -52,13 +53,13 @@ public class AI {
 			while (true) {
 
 				if (DEBUG) {
-					System.out.println("==================New Move====================");
+					//System.out.println("==================New Move====================");
 					fw.append("==================New Move====================\n");
 				}
 				// Try move and get score
 				// then make your move with this method call!
-				MakeMove(greedy(game));
-
+				//MakeMove(greedy(game));
+				MakeMove(MiniMaxAI(game));
 				// check time, since we are using Robot we need to kill it if we fail.
 				// another way to do this is create a "watchdog" thread that needs to be
 				// checked every x time.
@@ -317,7 +318,7 @@ public class AI {
 		return newTiles;
 	}
 
-	private static double getScore(Tile[] tiles) throws Exception {
+	public static double getScore(Tile[] tiles) throws Exception {
 		double score = 0;
 		double tmp = 0;
 		double tmp2 = 0;
@@ -350,7 +351,7 @@ public class AI {
 
 		if (DEBUG) {
 			tmp = (new GeometricSequence()).function(tiles);
-			System.out.println("GeometricSequence:" + tmp);
+			//System.out.println("GeometricSequence:" + tmp);
 			tmp2 = Weight_GeometricSequence * tmp;
 			fw.append("GeometricSequence:" + Weight_GeometricSequence + "*" + tmp + ": " + tmp2 + "\n");
 
@@ -360,7 +361,7 @@ public class AI {
 
 		if (DEBUG) {
 			tmp = (new MaxNumDis()).function(tiles);
-			System.out.println("MaxNumDis:" + tmp);
+			//System.out.println("MaxNumDis:" + tmp);
 			tmp2 = Weight_MaxNumDis * tmp;
 			fw.append("MaxNumDis:" + Weight_MaxNumDis + "*" + tmp + ": " + tmp2 + "\n");
 
@@ -369,7 +370,7 @@ public class AI {
 
 		if (DEBUG) {
 			tmp = (new SameNumberDistance()).function(tiles);
-			System.out.println("SameNumberDistance:" + tmp);
+			//System.out.println("SameNumberDistance:" + tmp);
 			tmp2 = Weight_SameNumberDistance * tmp;
 			fw.append("SameNumberDistance:" + Weight_SameNumberDistance + "*" + tmp + ": " + tmp2 + "\n");
 
@@ -378,7 +379,7 @@ public class AI {
 
 		if (DEBUG) {
 			tmp = (new SmallNumSum()).function(tiles);
-			System.out.println("SmallNumSum:" + tmp);
+			//System.out.println("SmallNumSum:" + tmp);
 			tmp2 = Weight_SmallNumSum * tmp;
 			fw.append("SmallNumSum:" + Weight_SmallNumSum + "*" + tmp + ": " + tmp2 + "\n");
 
@@ -387,7 +388,7 @@ public class AI {
 
 		if (DEBUG) {
 			tmp = (new SpaceNumber()).function(tiles);
-			System.out.println("SpaceNumber:" + tmp);
+			//System.out.println("SpaceNumber:" + tmp);
 			tmp2 = Weight_SpaceNumber * tmp;
 			fw.append("SpaceNumber:" + Weight_SpaceNumber + "*" + tmp + ": " + tmp2 + "\n");
 
@@ -396,7 +397,7 @@ public class AI {
 
 		if (DEBUG) {
 			tmp = (new SquareArea()).function(tiles);
-			System.out.println("SquareArea:" + tmp);
+			//System.out.println("SquareArea:" + tmp);
 			tmp2 = Weight_SquareArea * tmp;
 			fw.append("SquareArea:" + Weight_SquareArea + "*" + tmp + ": " + tmp2 + "\n");
 
@@ -421,5 +422,72 @@ public class AI {
 			System.out.println();
 			fw.append("\n");
 		}
+	}
+	
+	
+	
+	public static class child{
+		Tile[] state;
+		Move direction;
+		
+		public child(Tile[] state, Move direction) {
+			this.state = state;
+			this.direction = direction;
+		}
+	}
+	
+	//implementing minimax
+	public static List<child> getPossibleList(Tile[] currentState) throws Exception{
+		List<child> c = new LinkedList<child>();
+		
+		Tile[] nextBoard;
+		nextBoard = predictLeft(currentState);
+		if(checkNoChange(currentState,nextBoard)) {
+			c.add(new child(nextBoard,Move.Left));
+		}
+		
+		nextBoard = predictRight(currentState);
+		if(checkNoChange(currentState,nextBoard)) {
+			c.add(new child(nextBoard,Move.Right));
+		}
+		
+		nextBoard = predictUp(currentState);
+		if(checkNoChange(currentState,nextBoard)) {
+			c.add(new child(nextBoard,Move.Up));
+		}
+		
+		nextBoard = predictDown(currentState);
+		if(checkNoChange(currentState,nextBoard)) {
+			c.add(new child(nextBoard,Move.Down));
+		}
+		
+		return c;
+	}
+	
+	public static Move MiniMaxAI(Game2048 game) throws Exception {
+		Minimax m = new Minimax();
+		Tile[] currentState = game.getBoard();
+		int MaxDepth = 4;
+		m.initialize(currentState);
+		Node root = m.tree.getRoot();
+
+		//int n = root.getChild().size();
+		//for(int i=0;i<n;i++) {
+			//System.out.print(root.getChild().get(i)+"\t");
+		//}
+		//System.out.println();
+		
+		
+		m.constructTree(m.tree.getRoot(), MaxDepth);
+		Node choice = m.getBestChild(m.tree.getRoot(), MaxDepth);
+		
+		
+		
+		
+		
+		if(choice != null) return choice.getDirection();
+		else return Move.Left;
+		
+
 	}
 }
