@@ -428,7 +428,7 @@ public class AI {
 		double Weight_Distance = 1;
 		double Weight_Smoothness = 1;
 		double Weight_GeometricSequence = 2;
-		double Weight_MaxNumDis = 30;
+		double Weight_MaxNumDis = 25;
 		double Weight_SameNumberDistance = 2.5;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 2.1;
@@ -465,11 +465,12 @@ public class AI {
 		tmp = (new SpaceNumber()).function(tiles);
 		tmp2 = Weight_SpaceNumber * tmp;
 		score += tmp2;
-		
+
+		/*
 		tmp = (new SquareArea()).function(tiles);
 		tmp2 = Weight_SquareArea * tmp;
 		score += tmp2;
-		
+*/		
 		
 		return score;
 	}
