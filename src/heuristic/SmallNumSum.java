@@ -20,7 +20,7 @@ public class SmallNumSum implements Heuristic {
 			if (t.getValue() == 0)
 				count++;
 			else
-				sum = Math.pow(LogNumber.LogReturn(t.getValue()), 2) + sum;
+				sum = Math.pow(LogNumber.LogReturn(t.getValue()), 3) + sum;
 		}
 		
 		sum = sum / (n - count);

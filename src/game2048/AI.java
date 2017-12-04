@@ -323,9 +323,9 @@ public class AI {
 		double tmp2 = 0;
 		double Weight_BePair = 0.083;
 		double Weight_Distance = 1;
-		double Weight_Smoothness = 1;
+		double Weight_Smoothness = 3;
 		double Weight_GeometricSequence = 2;
-		double Weight_MaxNumDis = 30;
+		double Weight_MaxNumDis = 25;
 		double Weight_SameNumberDistance = 2.5;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 2.1;
@@ -359,7 +359,7 @@ public class AI {
 		}
 		score += tmp2;
 
-		if (DEBUG) {
+		/*if (DEBUG) {
 			tmp = (new GeometricSequence()).function(tiles);
 			//System.out.println("GeometricSequence:" + tmp);
 			tmp2 = Weight_GeometricSequence * tmp;
@@ -367,7 +367,7 @@ public class AI {
 
 		}
 
-		score += tmp2;
+		score += tmp2;*/
 
 		if (DEBUG) {
 			tmp = (new MaxNumDis()).function(tiles);
@@ -405,14 +405,14 @@ public class AI {
 		}
 		score += tmp2;
 
-		if (DEBUG) {
+		/*if (DEBUG) {
 			tmp = (new SquareArea()).function(tiles);
 			//System.out.println("SquareArea:" + tmp);
 			tmp2 = Weight_SquareArea * tmp;
 			if(reach1024(tiles)) fw.append("SquareArea:" + Weight_SquareArea + "*" + tmp + ": " + tmp2 + "\n");
 
 		}
-		score += tmp2;
+		score += tmp2;*/
 
 		if (DEBUG) {
 			//System.out.println("Score:" + score);
@@ -426,9 +426,9 @@ public class AI {
 		double tmp2 = 0;
 		double Weight_BePair = 0.083;
 		double Weight_Distance = 1;
-		double Weight_Smoothness = 1;
+		double Weight_Smoothness = 5;
 		double Weight_GeometricSequence = 2;
-		double Weight_MaxNumDis = 25;
+		double Weight_MaxNumDis = 30;
 		double Weight_SameNumberDistance = 2.5;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 2.1;
@@ -446,9 +446,11 @@ public class AI {
 		tmp2 = Weight_Smoothness * tmp;
 		score += tmp2;
 		
-		tmp = (new GeometricSequence()).function(tiles);
+		
+		/*tmp = (new GeometricSequence()).function(tiles);
 		tmp2 = Weight_GeometricSequence * tmp;
-		score += tmp2;
+		score += tmp2;*/
+		
 		
 		tmp = (new MaxNumDis()).function(tiles);
 		tmp2 = Weight_MaxNumDis * tmp;
@@ -479,7 +481,7 @@ public class AI {
 		for (int x = 0; x < 4; x++) {
 			for (int y = 0; y < 4; y++) {
 				//System.out.print(t[x * 4 + y].getValue() + "\t");
-				fw.append(t[x * 4 + y].getValue() + "\t");
+				fw.append(t[x * 4 + y].getValue() + "\t\t");
 			}
 			//System.out.println();
 			fw.append("\n");
