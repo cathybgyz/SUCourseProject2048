@@ -72,11 +72,11 @@ public class SameNumberDistance implements Heuristic {
 					if (distance > 0 && distance < min)
 						min = distance;
 				}
-				score += Math.log(curValue)/Math.log(2)*Math.pow(0.75, min)*sameValueTiles.size();
+				score += Math.log(curValue)/Math.log(2)*Math.pow(0.75, min);
 				i++;
 			}
 		}
 
-		return score/NONZERO;
+		return score;
 	}
 }
