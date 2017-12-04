@@ -322,15 +322,15 @@ public class AI {
 		double score = 0;
 		double tmp = 0;
 		double tmp2 = 0;
-		double Weight_BePair = 50;
-		double Weight_Distance = 0.1;
-		double Weight_Smoothness = 0.7;
-		double Weight_GeometricSequence = 1.75;
+		double Weight_BePair = 0.083;
+		double Weight_Distance = 1;
+		double Weight_Smoothness = 1;
+		double Weight_GeometricSequence = 2;
 		double Weight_MaxNumDis = 30;
-		double Weight_SameNumberDistance = 60;
+		double Weight_SameNumberDistance = 2.5;
 		double Weight_SmallNumSum = 8;
-		double Weight_SpaceNumber = 70;
-		double Weight_SquareArea = 4;
+		double Weight_SpaceNumber = 2.1;
+		double Weight_SquareArea = 1.2;
 
 		// ----------
 		if (DEBUG) {
@@ -476,7 +476,7 @@ public class AI {
 	public static Move MiniMaxAI(Game2048 game) throws Exception {
 		Minimax m = new Minimax();
 		Tile[] currentState = game.getBoard();
-		int MaxDepth = 4;
+		int MaxDepth = 3;
 		m.initialize(currentState);
 		Node root = m.tree.getRoot();
 
