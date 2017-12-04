@@ -1,13 +1,7 @@
 package heuristic;
 
-import static org.junit.jupiter.api.Assumptions.assumingThat;
-
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
-
-import javax.swing.border.TitledBorder;
 
 import game2048.Tile;
 
@@ -28,18 +22,20 @@ public class Distance implements Heuristic {
 
 		double score = 0;
 		for (Integer cur : existedValue) {
+			if(cur.intValue()==0)
+				continue;
 			int distance = 6;
 			for (Tile t : tile) {
-				if (t.getValue() != cur)
+				if (t.getValue().intValue() != cur.intValue())
 					continue;
-				int tmp = t.getCol() + t.getRow() - 3;
+				int tmp = t.getCol() + t.getRow();
 				if (tmp < distance)
 					distance = tmp;
 			}
 
-			score += cur * Math.pow(0.1, distance);
+			score += LogNumber.LogReturn(cur) * Math.pow(0.1, distance);
 		}
-		return score/existedValue.size();
+		return score;
 	}
 
 }

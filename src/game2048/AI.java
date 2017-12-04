@@ -329,7 +329,7 @@ public class AI {
 		double Weight_MaxNumDis = 30;
 		double Weight_SameNumberDistance = 60;
 		double Weight_SmallNumSum = 8;
-		double Weight_SpaceNumber = 30;
+		double Weight_SpaceNumber = 70;
 		double Weight_SquareArea = 4;
 
 		// ----------

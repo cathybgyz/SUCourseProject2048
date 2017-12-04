@@ -21,9 +21,9 @@ public class BePair implements Heuristic {
 		
 		for(int x=0;x<3;x++) {
 			for(int y=0;y<3;y++) {
-				if(board[x*4+y].getValue() == board[(x+1)*4+y].getValue())
+				if(board[x*4+y].getValue().intValue() == board[(x+1)*4+y].getValue().intValue())
 					table[LogNumber.LogReturn(board[x*4+y].getValue())]++;
-				else if(board[x*4+y].getValue() == board[(x)*4+y+1].getValue())
+				else if(board[x*4+y].getValue().intValue() == board[(x)*4+y+1].getValue().intValue())
 					table[LogNumber.LogReturn(board[x*4+y].getValue())]++;
 			}
 		}
