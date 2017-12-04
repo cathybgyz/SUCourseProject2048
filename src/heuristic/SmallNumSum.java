@@ -24,19 +24,6 @@ public class SmallNumSum implements Heuristic {
 		}
 		
 		sum = sum / (n - count);
-
-		// if (sum < 2 ) {score = 1;}
-		// else if(sum>= 2 && sum <3) {score = 2;}
-		// else if(sum>= 3 && sum <4) {score = 3;}
-		// else if(sum>= 4 && sum <5) {score = 4;}
-		// else if(sum>= 5 && sum <6) {score = 5;}
-		// else if(sum>= 6 && sum <7) {score = 6;}
-		// else if(sum>= 7 && sum <8) {score = 7;}
-		// else if(sum>= 8 && sum <9) {score = 8;}
-		// else if(sum>= 9 && sum <10) {score = 9;}
-		// else if(sum>= 10 && sum <11) {score = 10;}
-		// else if(sum>= 11 && sum <12) {score = 11;}
-		// else {score = 12;}
 		return sum;
 	}
 }

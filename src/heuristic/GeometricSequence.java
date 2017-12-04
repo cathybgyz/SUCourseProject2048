@@ -40,7 +40,7 @@ public class GeometricSequence implements Heuristic {
 						else score++;
 					else if (array2d[i][j] == array2d[i][j+1]/2)
 						if (array2d[i][j+1]==max)
-							score= score +5;
+							score= score +10;
 						else score++;
 						
 				}
@@ -50,11 +50,11 @@ public class GeometricSequence implements Heuristic {
 					if (array2d[i+1][j]==0) continue;
 					if (array2d[i][j] == array2d[i+1][j]*2)
 						if (array2d[i][j]==max)
-							score= score +5;
+							score= score +10;
 						else score++;
 					else if (array2d[i][j] == array2d[i+1][j]/2)
 						if (array2d[i+1][j]==max)
-							score= score +5;
+							score= score +10;
 						else score++;
 						
 				}
