@@ -335,7 +335,7 @@ public class AI {
 		// ----------
 		if (DEBUG) {
 			tmp = (new BePair()).function(tiles);
-			System.out.println("BePair:" + tmp);
+			//System.out.println("BePair:" + tmp);
 			tmp2 = Weight_BePair * tmp;
 			fw.append("BePair:" + Weight_BePair + "*" + tmp + ": " + tmp2 + "\n");
 		}
@@ -345,7 +345,7 @@ public class AI {
 		// ----------
 		if (DEBUG) {
 			tmp = (new Distance()).function(tiles);
-			System.out.println("Distance:" + tmp);
+			//System.out.println("Distance:" + tmp);
 			tmp2 = Weight_Distance * tmp;
 			fw.append("Distance:" + Weight_Distance + "*" + tmp + ": " + tmp2 + "\n");
 		}
@@ -354,7 +354,7 @@ public class AI {
 
 		if (DEBUG) {
 			tmp = (new Smoothness()).function(tiles);
-			System.out.println("Smoothness:" + tmp);
+			//System.out.println("Smoothness:" + tmp);
 			tmp2 = Weight_Smoothness * tmp;
 			fw.append("Smoothness:" + Weight_Smoothness + "*" + tmp + ": " + tmp2 + "\n");
 		}
@@ -416,7 +416,7 @@ public class AI {
 		score += tmp2;
 
 		if (DEBUG) {
-			System.out.println("Score:" + score);
+			//System.out.println("Score:" + score);
 			fw.append("Score:" + score + "\n");
 		}
 		return score;
@@ -474,7 +474,7 @@ public class AI {
 	}
 	
 	public static Move MiniMaxAI(Game2048 game) throws Exception {
-		Minimax m = new Minimax();
+		MinimaxMultiThreads m = new MinimaxMultiThreads();
 		Tile[] currentState = game.getBoard();
 		int MaxDepth = 4;
 		m.initialize(currentState);
@@ -487,7 +487,9 @@ public class AI {
 		//System.out.println();
 		
 		
-		m.constructTree(m.tree.getRoot(), MaxDepth);
+		//m.constructTree(m.tree.getRoot(), MaxDepth);
+		m.runConstruction(m.tree.getRoot(), MaxDepth);
+				
 		Node choice = m.getBestChild(m.tree.getRoot(), MaxDepth);
 		
 		
