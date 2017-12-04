@@ -33,7 +33,7 @@ public class Distance implements Heuristic {
 					distance = tmp;
 			}
 
-			score += LogNumber.LogReturn(cur) * Math.pow(0.1, distance);
+			score += cur * Math.pow(0.1, distance);
 		}
 		return score;
 	}
