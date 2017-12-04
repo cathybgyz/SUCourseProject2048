@@ -42,6 +42,7 @@ public class MaxNumDis implements Heuristic{
 			for(int i = 0; i < 4; i++) {
 				for(int j = 0; j < 4; j++) {
 					if(array2d[i][j] == max) {
+						
 						if (Math.min(Math.min(i+j, i+3-j), Math.min(3-i+j, 6-i-j)) == 0)
 							scorel[m] = 2;
 						else if(Math.min(Math.min(i+j, i+3-j), Math.min(3-i+j, 6-i-j)) == 1)
@@ -49,6 +50,7 @@ public class MaxNumDis implements Heuristic{
 						else
 							scorel[m] = 0;
 						m++;
+						
 					}
 
 				}
