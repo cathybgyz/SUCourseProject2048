@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import game2048.AI.Move;
-import game2048.AI.*;
+import game2048.AI.child;
 
 public class Minimax {
 	Tree tree;
@@ -122,5 +122,4 @@ public class Minimax {
 		}
 		return best;
 	}
-
 }

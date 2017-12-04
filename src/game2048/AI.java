@@ -3,6 +3,7 @@ package game2048;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,8 +21,12 @@ public class AI {
 
 	public static FileWriter fw;
 
+	public static FileWriter scoreWriter;
+
 	public static void main(String[] args) throws Exception {
 		fw = new FileWriter("test.txt");
+		scoreWriter = new FileWriter("ScoreRecord.csv");
+
 		JFrame game = new JFrame();
 		game.setTitle("2048 Game");
 		game.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -38,6 +43,7 @@ public class AI {
 
 		RunAi(game2048);
 		fw.close();
+		scoreWriter.close();
 	}
 
 	public static final int MaxTimeSec = 60;
@@ -51,19 +57,42 @@ public class AI {
 
 		try {
 			while (true) {
-
+				if(game2048.myLose) {
+					try {
+						scoreWriter.append(Integer.toString(game2048.myScore));
+						scoreWriter.append(",");
+						scoreWriter.append("\n");
+						scoreWriter.close();
+						scoreWriter = new FileWriter("ScoreRecord.csv",true);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					MakeMove(Move.Esc);
+					Thread.sleep(50);
+					continue;
+				}
 				if (DEBUG) {
-					//System.out.println("==================New Move====================");
-					if(reach1024(game.getBoard())) fw.append("==================New Move====================\n");
+					// System.out.println("==================New Move====================");
+					if (reach1024(game.getBoard()))
+						fw.append("==================New Move====================\n");
 				}
 				// Try move and get score
 				// then make your move with this method call!
-				//MakeMove(greedy(game));
-				MakeMove(MiniMaxAI(game));
+				// MakeMove(greedy(game));
+				Move m = MiniMaxAI(game);
+				if(m!=null)
+					MakeMove(m);
+				else {
+					MakeMove(Move.Left);
+					MakeMove(Move.Right);
+					MakeMove(Move.Up);
+					MakeMove(Move.Down);
+				}
 				// check time, since we are using Robot we need to kill it if we fail.
 				// another way to do this is create a "watchdog" thread that needs to be
 				// checked every x time.
-				Thread.sleep(50);
+				// Thread.sleep(50);
 				// secondsPassed++;
 				// if (secondsPassed >= MaxTimeSec)
 				// System.exit(0);
@@ -164,7 +193,7 @@ public class AI {
 	}
 
 	public static enum Move {
-		Up, Down, Left, Right
+		Esc, Up, Down, Left, Right
 	}
 
 	public static Boolean MakeMove(Move move) {
@@ -172,7 +201,9 @@ public class AI {
 			Robot r = new Robot();
 
 			int keyCode = 0;
-			if (move == Move.Up)
+			if(move == Move.Esc)
+				keyCode = KeyEvent.VK_ESCAPE;
+			else if (move == Move.Up)
 				keyCode = KeyEvent.VK_UP;
 			else if (move == Move.Down)
 				keyCode = KeyEvent.VK_DOWN;
@@ -317,7 +348,8 @@ public class AI {
 		}
 		return newTiles;
 	}
-	private static double debugScore(Tile[] tiles) throws Exception{
+
+	private static double debugScore(Tile[] tiles) throws Exception {
 		double score = 0;
 		double tmp = 0;
 		double tmp2 = 0;
@@ -325,8 +357,8 @@ public class AI {
 		double Weight_Distance = 1;
 		double Weight_Smoothness = 3;
 		double Weight_GeometricSequence = 2;
-		double Weight_MaxNumDis = 25;
-		double Weight_SameNumberDistance = 2.5;
+		double Weight_MaxNumDis = 30;
+		double Weight_SameNumberDistance = 0.7;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 2.1;
 		double Weight_SquareArea = 1.2;
@@ -334,9 +366,10 @@ public class AI {
 		// ----------
 		if (DEBUG) {
 			tmp = (new BePair()).function(tiles);
-			//System.out.println("BePair:" + tmp);
+			// System.out.println("BePair:" + tmp);
 			tmp2 = Weight_BePair * tmp;
-			if(reach1024(tiles)) fw.append("BePair:" + Weight_BePair + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("BePair:" + Weight_BePair + "*" + tmp + ": " + tmp2 + "\n");
 		}
 		score += tmp2;
 		// ------------------
@@ -344,26 +377,29 @@ public class AI {
 		// ----------
 		if (DEBUG) {
 			tmp = (new Distance()).function(tiles);
-			//System.out.println("Distance:" + tmp);
+			// System.out.println("Distance:" + tmp);
 			tmp2 = Weight_Distance * tmp;
-			if(reach1024(tiles)) fw.append("Distance:" + Weight_Distance + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("Distance:" + Weight_Distance + "*" + tmp + ": " + tmp2 + "\n");
 		}
 		score += tmp2;
 		// ------------------
 
 		if (DEBUG) {
 			tmp = (new Smoothness()).function(tiles);
-			//System.out.println("Smoothness:" + tmp);
+			// System.out.println("Smoothness:" + tmp);
 			tmp2 = Weight_Smoothness * tmp;
-			if(reach1024(tiles)) fw.append("Smoothness:" + Weight_Smoothness + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("Smoothness:" + Weight_Smoothness + "*" + tmp + ": " + tmp2 + "\n");
 		}
 		score += tmp2;
 
 		/*if (DEBUG) {
 			tmp = (new GeometricSequence()).function(tiles);
-			//System.out.println("GeometricSequence:" + tmp);
+			// System.out.println("GeometricSequence:" + tmp);
 			tmp2 = Weight_GeometricSequence * tmp;
-			if(reach1024(tiles)) fw.append("GeometricSequence:" + Weight_GeometricSequence + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("GeometricSequence:" + Weight_GeometricSequence + "*" + tmp + ": " + tmp2 + "\n");
 
 		}
 
@@ -371,55 +407,63 @@ public class AI {
 
 		if (DEBUG) {
 			tmp = (new MaxNumDis()).function(tiles);
-			//System.out.println("MaxNumDis:" + tmp);
+			// System.out.println("MaxNumDis:" + tmp);
 			tmp2 = Weight_MaxNumDis * tmp;
-			if(reach1024(tiles)) fw.append("MaxNumDis:" + Weight_MaxNumDis + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("MaxNumDis:" + Weight_MaxNumDis + "*" + tmp + ": " + tmp2 + "\n");
 
 		}
 		score += tmp2;
 
 		if (DEBUG) {
 			tmp = (new SameNumberDistance()).function(tiles);
-			//System.out.println("SameNumberDistance:" + tmp);
+			// System.out.println("SameNumberDistance:" + tmp);
 			tmp2 = Weight_SameNumberDistance * tmp;
-			if(reach1024(tiles)) fw.append("SameNumberDistance:" + Weight_SameNumberDistance + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("SameNumberDistance:" + Weight_SameNumberDistance + "*" + tmp + ": " + tmp2 + "\n");
 
 		}
 		score += tmp2;
 
 		if (DEBUG) {
 			tmp = (new SmallNumSum()).function(tiles);
-			//System.out.println("SmallNumSum:" + tmp);
+			// System.out.println("SmallNumSum:" + tmp);
 			tmp2 = Weight_SmallNumSum * tmp;
-			if(reach1024(tiles)) fw.append("SmallNumSum:" + Weight_SmallNumSum + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("SmallNumSum:" + Weight_SmallNumSum + "*" + tmp + ": " + tmp2 + "\n");
 
 		}
 		score += tmp2;
 
 		if (DEBUG) {
 			tmp = (new SpaceNumber()).function(tiles);
-			//System.out.println("SpaceNumber:" + tmp);
+			// System.out.println("SpaceNumber:" + tmp);
 			tmp2 = Weight_SpaceNumber * tmp;
-			if(reach1024(tiles)) fw.append("SpaceNumber:" + Weight_SpaceNumber + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("SpaceNumber:" + Weight_SpaceNumber + "*" + tmp + ": " + tmp2 + "\n");
 
 		}
 		score += tmp2;
 
 		/*if (DEBUG) {
 			tmp = (new SquareArea()).function(tiles);
-			//System.out.println("SquareArea:" + tmp);
+			// System.out.println("SquareArea:" + tmp);
 			tmp2 = Weight_SquareArea * tmp;
-			if(reach1024(tiles)) fw.append("SquareArea:" + Weight_SquareArea + "*" + tmp + ": " + tmp2 + "\n");
+			if (reach1024(tiles))
+				fw.append("SquareArea:" + Weight_SquareArea + "*" + tmp + ": " + tmp2 + "\n");
 
 		}
 		score += tmp2;*/
 
 		if (DEBUG) {
-			//System.out.println("Score:" + score);
-			if(reach1024(tiles)) fw.append("Score:" + score + "\n");
+			// System.out.println("Score:" + score);
+
+			if (reach1024(tiles))
+				fw.append("Score:" + score + "\n");
 		}
 		return score;
 	}
+
 	public static double getScore(Tile[] tiles) throws Exception {
 		double score = 0;
 		double tmp = 0;
@@ -433,47 +477,45 @@ public class AI {
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 2.1;
 		double Weight_SquareArea = 1.2;
-		
+
 		tmp = (new BePair()).function(tiles);
 		tmp2 = Weight_BePair * tmp;
 		score += tmp2;
-		
+
 		tmp = (new Distance()).function(tiles);
 		tmp2 = Weight_Distance * tmp;
 		score += tmp2;
-		
+
 		tmp = (new Smoothness()).function(tiles);
 		tmp2 = Weight_Smoothness * tmp;
 		score += tmp2;
-		
-		
+
 		/*tmp = (new GeometricSequence()).function(tiles);
 		tmp2 = Weight_GeometricSequence * tmp;
 		score += tmp2;*/
-		
-		
+
+
 		tmp = (new MaxNumDis()).function(tiles);
 		tmp2 = Weight_MaxNumDis * tmp;
 		score += tmp2;
-		
+
 		tmp = (new SameNumberDistance()).function(tiles);
 		tmp2 = Weight_SameNumberDistance * tmp;
 		score += tmp2;
-		
+
 		tmp = (new SmallNumSum()).function(tiles);
 		tmp2 = Weight_SmallNumSum * tmp;
 		score += tmp2;
-		
+
 		tmp = (new SpaceNumber()).function(tiles);
 		tmp2 = Weight_SpaceNumber * tmp;
 		score += tmp2;
 
 		/*
-		tmp = (new SquareArea()).function(tiles);
-		tmp2 = Weight_SquareArea * tmp;
-		score += tmp2;
-*/		
-		
+		 * tmp = (new SquareArea()).function(tiles); tmp2 = Weight_SquareArea * tmp;
+		 * score += tmp2;
+		 */
+
 		return score;
 	}
 
@@ -483,81 +525,84 @@ public class AI {
 				//System.out.print(t[x * 4 + y].getValue() + "\t");
 				fw.append(t[x * 4 + y].getValue() + "\t\t");
 			}
-			//System.out.println();
+			// System.out.println();
 			fw.append("\n");
 		}
 	}
-	
-	
-	
-	public static class child{
+
+	public static class child {
 		Tile[] state;
 		Move direction;
-		
+
 		public child(Tile[] state, Move direction) {
 			this.state = state;
 			this.direction = direction;
 		}
 	}
-	
-	//implementing minimax
-	public static List<child> getPossibleList(Tile[] currentState) throws Exception{
+
+	// implementing minimax
+	public static List<child> getPossibleList(Tile[] currentState) throws Exception {
 		List<child> c = new LinkedList<child>();
-		
+
 		Tile[] nextBoard;
 		nextBoard = predictLeft(currentState);
-		if(checkNoChange(currentState,nextBoard)) {
-			c.add(new child(nextBoard,Move.Left));
+		if (checkNoChange(currentState, nextBoard)) {
+			c.add(new child(nextBoard, Move.Left));
 		}
-		
+
 		nextBoard = predictRight(currentState);
-		if(checkNoChange(currentState,nextBoard)) {
-			c.add(new child(nextBoard,Move.Right));
+		if (checkNoChange(currentState, nextBoard)) {
+			c.add(new child(nextBoard, Move.Right));
 		}
-		
+
 		nextBoard = predictUp(currentState);
-		if(checkNoChange(currentState,nextBoard)) {
-			c.add(new child(nextBoard,Move.Up));
+		if (checkNoChange(currentState, nextBoard)) {
+			c.add(new child(nextBoard, Move.Up));
 		}
-		
+
 		nextBoard = predictDown(currentState);
-		if(checkNoChange(currentState,nextBoard)) {
-			c.add(new child(nextBoard,Move.Down));
+		if (checkNoChange(currentState, nextBoard)) {
+			c.add(new child(nextBoard, Move.Down));
 		}
-		
+
 		return c;
 	}
-	
+
 	public static Move MiniMaxAI(Game2048 game) throws Exception {
-		Minimax m = new Minimax();
+		MinimaxMultiThreads m = new MinimaxMultiThreads();
 		Tile[] currentState = game.getBoard();
 		int MaxDepth = 3;
 		m.initialize(currentState);
 		Node root = m.tree.getRoot();
-		m.constructTree(m.tree.getRoot(), MaxDepth);
+
+		// int n = root.getChild().size();
+		// for(int i=0;i<n;i++) {
+		// System.out.print(root.getChild().get(i)+"\t");
+		// }
+		// System.out.println();
+
+		// m.constructTree(m.tree.getRoot(), MaxDepth);
+		m.runConstruction(m.tree.getRoot(), MaxDepth);
+
 		Node choice = m.getBestChild(m.tree.getRoot(), MaxDepth);
-		
-		if(reach1024(currentState)) {
+
+		if (reach1024(currentState)) {
 			printTiles(currentState);
 			debugScore(currentState);
 		}
-		
-		
-		
-		if(choice != null) return choice.getDirection();
-		else return Move.Left;
-		
+
+		if (choice != null)
+			return choice.getDirection();
+
+		return null;
 
 	}
-	
-	
-	public static boolean reach1024 (Tile[] tile) {
-		for(Tile t:tile) {
-			if(t.getValue()>=1024) return true;
+
+	public static boolean reach1024(Tile[] tile) {
+		for (Tile t : tile) {
+			if (t.getValue() >= 1024)
+				return true;
 		}
 		return false;
 	}
 }
-
-
-
