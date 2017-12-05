@@ -356,12 +356,12 @@ public class AI {
 		double Weight_BePair = 0.083;
 		double Weight_Distance = 1;
 		double Weight_Smoothness = 3;
-		double Weight_GeometricSequence = 2;
+//		double Weight_GeometricSequence = 2;
 		double Weight_MaxNumDis = 30;
 		double Weight_SameNumberDistance = 0.7;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 2.1;
-		double Weight_SquareArea = 1.2;
+//		double Weight_SquareArea = 1.2;
 
 		// ----------
 		if (DEBUG) {
@@ -471,12 +471,12 @@ public class AI {
 		double Weight_BePair = 0.083;
 		double Weight_Distance = 1;
 		double Weight_Smoothness = 5;
-		double Weight_GeometricSequence = 2;
+//		double Weight_GeometricSequence = 2;
 		double Weight_MaxNumDis = 30;
 		double Weight_SameNumberDistance = 2.5;
 		double Weight_SmallNumSum = 8;
 		double Weight_SpaceNumber = 2.1;
-		double Weight_SquareArea = 1.2;
+//		double Weight_SquareArea = 1.2;
 
 		tmp = (new BePair()).function(tiles);
 		tmp2 = Weight_BePair * tmp;

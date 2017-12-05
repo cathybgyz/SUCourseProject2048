@@ -14,7 +14,7 @@ public class test {
 		FileWriter fw = new FileWriter("score.csv");
 		
 		// Change the function object below
-		Heuristic func = new BePair();
+		Heuristic func = new SmallNumSum();
 		double score = 0;
 
 		for (int cur = 0; cur < testTime; cur++) {
